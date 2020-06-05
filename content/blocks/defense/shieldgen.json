@@ -1,8 +1,9 @@
 {
   "size": 1,
   "health": 120,
-  "radius": 75,
-  "breakage": 440,
+  "radius": 60,
+  "phaseRadiusBoost": 5,
+  "breakage": 390,
   "consumes": {
     "power": 1,
     "items": {
