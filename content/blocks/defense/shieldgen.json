@@ -9,7 +9,6 @@
       "items": [
         {"item": "dirium", "amount": 1}
       ],
-        "optional": true,
         "booster": true
     }
   },
