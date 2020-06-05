@@ -35,7 +35,7 @@ const dirWall = extendContent(Wall, "diriumwall", {
   
   handleBulletHit(entity, bullet){
   if(entity != null && bullet != null){
-    Effects.effect(Fx.nuclearShockwave, entity.x, entity.y, entity.rotation - 90);
+    Effects.effect(wallEffect, entity.x, entity.y, entity.rotation - 90);
   }
 }
 });
