@@ -61,6 +61,13 @@ const dirWallLarge = extendContent(Wall, "diriumwalllarge", {
     if(!tile.floor().solid && !tile.floor().isLiquid){
       RubbleDecal.create(tile.drawx(), tile.drawy(), this.size);
     }
+  },
+  
+  handleBulletHit(entity, bullet){
+  if(entity != null && bullet != null){
+    Effects.effect(wallEffectLarge, entity.x, entity.y, entity.rotation - 90);
   }
+}
 });
 
+//Thanks to @GlennFolker for making the handleBulletHit finally working.
