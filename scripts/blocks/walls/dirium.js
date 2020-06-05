@@ -27,10 +27,6 @@ const dirWall = extendContent(Wall, "diriumwall", {
   
   onDestroyed(tile){
     Effects.effect(wallEffect, tile);
-    
-    if(!tile.floor().solid && !tile.floor().isLiquid){
-       RubbleDecal.create(tile.drawx(), tile.drawy(), this.size);
-    }
   }
 });
 
