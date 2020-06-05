@@ -36,7 +36,7 @@ const dirWall = extendContent(Wall, "diriumwall", {
   handleBulletHit(entity, bullet){
     entity.damage(bullet.damage());
     
-    Effects.effect(wallEffect, this.x, this.y, 0);
+    Effects.effect(wallEffect, 100, 160, 0);
   }
 });
 
