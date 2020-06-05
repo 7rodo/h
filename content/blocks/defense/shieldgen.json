@@ -1,0 +1,9 @@
+{
+  "size": 1,
+  "health": 120,
+  "radius": 30,
+  "breakage": 340,
+  "consumes": {
+    "power": 1
+  }
+}
