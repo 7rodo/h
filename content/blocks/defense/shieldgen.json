@@ -9,6 +9,6 @@
   "requirements": [
     {"item": "titanium", "amount": 75},
     {"item": "dirium", "amount": 30}
-  ]
+  ],
   "category": "effect"
 }
