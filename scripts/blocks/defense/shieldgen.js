@@ -22,7 +22,7 @@ const shieldGen = extendContent(ForceProjector, "shieldgen", {
     if(entity.buildup <= 0){
       Draw.alpha(entity.buildup / breakage * 0.75);
       Draw.blend(Blending.additive);
-      Lines.circle(tile.drawy(), tile.drawx(). 10)
+      Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
       Draw.blend();
       Draw.reset();
     }
