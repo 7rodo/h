@@ -21,7 +21,7 @@ const dirWall = extendContent(Wall, "diriumwall", {
     ]
   },
   
-  draw(){
+  draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy());
   },
   
@@ -43,7 +43,7 @@ const dirWallLarge = extendContent(Wall, "diriumwalllarge", {
     ]
   },
   
-  draw(){
+  draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy());
   },
   
