@@ -1,0 +1,8 @@
+{
+  "health": 270,
+  "size": 2,
+  "category": "defense",
+  "requirements": [
+    {"item": "dirium", "amount": 24}
+  ]
+}
