@@ -1,8 +1,8 @@
 {
   "size": 1,
   "health": 120,
-  "radius": 60,
-  "breakage": 340,
+  "radius": 75,
+  "breakage": 440,
   "consumes": {
     "power": 1,
     "items": {
