@@ -25,10 +25,12 @@ const dirWall = extendContent(Wall, "diriumwall", {
     Draw.rect(this.region, tile.drawx(), tile.drawy());
   },
   
-  handleBulletHit(entity, bullet){
-    entity.damage(bullet.damage());
+  onDestroyed(tile){
+    Effects.effect(wallEffect, tile);
     
-    Effects.effect(wallEffect, this.x, this.y);
+    if(!tile.floor().solid && !tile.floor().isLiquid){
+       RubbleDecal.create(tile.drawx(), tile.drawy(), this.size);
+    }
   }
 });
 
