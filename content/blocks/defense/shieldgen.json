@@ -7,9 +7,11 @@
     "power": 1,
     "items": {
       "items": [
-        {"item": "dirium", "amount": 1, "booster": true, "optional": true}
+        {"item": "dirium", "amount": 1}
       ]
     }
+    "optional": true,
+    "booster": true
   },
   "requirements": [
     {"item": "titanium", "amount": 75},
