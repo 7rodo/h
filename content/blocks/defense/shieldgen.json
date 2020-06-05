@@ -6,12 +6,9 @@
   "consumes": {
     "power": 1,
     "items": {
-      "item": {
-        "item": "dirium",
-        "amount": 1,
-        "booster": true,
-        "optional": true
-      }
+      "items": [
+        {"item": "dirium", "amount": 1, "booster": true, "optional": true}
+      ]
     }
   },
   "requirements": [
