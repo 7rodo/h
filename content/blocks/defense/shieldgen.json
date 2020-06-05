@@ -1,10 +1,18 @@
 {
   "size": 1,
   "health": 120,
-  "radius": 30,
+  "radius": 60,
   "breakage": 340,
   "consumes": {
-    "power": 1
+    "power": 1,
+    "items": {
+      "item": [
+        "item": "dirium",
+        "amount": 1,
+        "booster": true,
+        "optional": true
+      ]
+    }
   },
   "requirements": [
     {"item": "titanium", "amount": 75},
