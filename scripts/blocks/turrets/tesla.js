@@ -5,16 +5,14 @@ const teslaSmoke = newEffect(65, e => {
   Draw.color(color1);
   Fill.circle(e.x, e.y, e.fin() * 3);
 
-  Draw.color();
+  Draw.color(color2);
   Fill.circle(e.x, e.y, e.fin() * 2);
 });
 
 const teslaShoot = newEffect(21, e => {
   Draw.color(color1);
 
-  for(i : Mathf.signs){
-    Drawf.tri(e.x, e.y, 4 * e.fout(), 29, e.rotation + 90 * i);
-  }
+  Fill.circle(e.x, e.y, e.fin() * 2);
 });
 
 const teslaLaser = extend(BasicBulletType, {
