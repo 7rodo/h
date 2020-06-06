@@ -3,10 +3,10 @@ const color2 = Color.valueOf("ebebeb");
 
 const teslaSmoke = newEffect(65, e => {
   Draw.color(color1);
-  Fill.circle(e.x, e.y, e.fin() * 2);
+  Fill.circle(e.x, e.y, e.fin() * 3);
 
   Draw.color(color2);
-  Fill.circle(e.x, e.y, e.fin());
+  Fill.circle(e.x, e.y, e.fin() * 2);
 });
 
 const teslaShoot = newEffect(21, e => {
