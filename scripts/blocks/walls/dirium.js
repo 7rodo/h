@@ -1,10 +1,10 @@
-const wallEffect = newEffect(5, e => {
+const wallEffect = newEffect(8, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
   Lines.square(e.x, e.y, 4 + e.fin() * 4);
 });
                              
-const wallEffectLarge = newEffect(5, e => {
+const wallEffectLarge = newEffect(8, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
   Lines.square(e.x, e.y, 6 + e.fin() * 4);
