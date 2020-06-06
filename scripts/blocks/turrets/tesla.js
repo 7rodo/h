@@ -57,3 +57,4 @@ const tesla = extendContent(PowerTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
 tesla.shootEffect = teslaShoot;
+tesla.smokeEffect = teslaSmoke;
