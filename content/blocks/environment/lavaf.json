@@ -8,6 +8,5 @@
   "statusDuration": 90,
   "isLiquid": true,
   "liquidDrop": "lava",
-  "updateEffect": "ripple",
-  "cacheLayer": "normal"
+  "updateEffect": "ripple"
 }
