@@ -28,9 +28,9 @@ const teslaLaser = extend(BasicBulletType, {
     baseLen = 95 * f;
 
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
-      for(int s = 0; s < 3; s++){
+      for(s = 0; s < 3; s++){
       Draw.color(colors[s]);
-      for(int i = 0; i < tscales.length; i++){
+      for(i = 0; i < tscales.length; i++){
         Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
       }
