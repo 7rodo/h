@@ -54,3 +54,5 @@ teslaLaser.hitEffect = Fx.none;
 const tesla = extendContent(LaserTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
+tesla.shootEffect = teslaShoot;
+tesla.smokeEffect = teslaSmoke;
