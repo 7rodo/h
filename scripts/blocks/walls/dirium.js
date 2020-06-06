@@ -1,13 +1,13 @@
-const wallEffect = newEffect(7, e => {
+const wallEffect = newEffect(10, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 2 + e.fin() * 4);
+  Lines.square(e.x, e.y, 5 + e.fin() * 4);
 });
                              
-const wallEffectLarge = newEffect(7, e => {
+const wallEffectLarge = newEffect(10, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 4 + e.fin() * 4);
+  Lines.square(e.x, e.y, 9 + e.fin() * 4);
 });                            
                               
 const dirWall = extendContent(Wall, "diriumwall", {
