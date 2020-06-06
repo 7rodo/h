@@ -4,7 +4,6 @@
   "size": 2,
   "range": 85,
   "targetAir": false,
-  "shootDuration": 10,
   "powerUse": 1.7,
   "shootSound": "tesla",
   "category": "turret",
