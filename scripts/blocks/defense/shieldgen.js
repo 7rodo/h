@@ -2,33 +2,26 @@
 const shieldGen = extendContent(ForceProjector, "shieldgen", {
   load(){
     this.region = Core.atlas.find(this.name);
-    this.spinRegion = Core.atlas.find(this.name + "-spin");
     this.topRegion = Core.atlas.find(this.name + "-top");
   },
   
   generateIcons(){
     return [
-      Core.atlas.find(this.name),
-      Core.atlas.find(this.name + "-spin"),
-      Core.atlas.find(this.name + "-top")
+      Core.atlas.find(this.name)
     ]
   },
   
   draw(tile){
-    entity = tile.ent();
+    power = tile.entity.power.status
     
     Draw.rect(this.region, tile.drawx(), tile.drawy());
     
-    if(entity.buildup <= 0){
-      Draw.alpha(entity.buildup / breakage * 0.75);
+    if(tile.entity.power.status > 0.001){
+      Draw.alpha(0.4);
       Draw.blend(Blending.additive);
       Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
       Draw.blend();
       Draw.reset();
     }
-    
-    Draw.rect(this.spinRegion, tile.drawx(), tile.drawy());
-    Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
-    
   }
 });
