@@ -51,7 +51,7 @@ teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
 
 
-const tesla = extendContent(LaserTurret, "tesla", {});
+const tesla = extendContent(PowerTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
 tesla.shootEffect = teslaShoot;
