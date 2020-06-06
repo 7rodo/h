@@ -1,4 +1,5 @@
 const color1 = Color.valueOf("fafafa");
+const color2 = Color.valueOf("ebebeb");
 
 const teslaSmoke = newEffect(65, e => {
   Draw.color(color1);
@@ -18,7 +19,7 @@ const teslaShoot = newEffect(21, e => {
 
 const teslaLaser = extend(BasicBulletType, {
   draw(b){
-    const colors = [color1.cpy().mul(1, 1, 1, 0.4), color1, Color.white];
+    const colors = [color1, color2, Color.valueOf("ffffff")];
     const tscales = [1, 0.7, 0.5, 0.2];
     const lenscales = [1, 1.1, 1.13, 1.14];
     const length = 95;
