@@ -50,7 +50,7 @@ teslaLaser.splashDamage = 8;
 teslaLaser.shootEffect = Fx.none;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
-teslaLaser.hitEffect = teslaSmoke;
+teslaLaser.hitEffect = Fx.none;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
