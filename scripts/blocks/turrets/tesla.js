@@ -17,13 +17,12 @@ const teslaShoot = newEffect(21, e => {
 });
 
 const teslaLaser = extend(BasicBulletType, {
-   const colors = [color1.cpy().mul(1f, 1f, 1f, 0.4f), color1, Color.white];
-   const tscales = [1, 0.7, 0.5, 0.2];
-   const lenscales = [1, 1.1, 1.13, 1.14];
-   const length = 95;
-
-
   draw(b){
+    const colors = [color1.cpy().mul(1, 1, 1, 0.4), color1, Color.white];
+    const tscales = [1, 0.7, 0.5, 0.2];
+    const lenscales = [1, 1.1, 1.13, 1.14];
+    const length = 95;
+
     f = Mathf.curve(b.fin(), 0, 0.2);
     baseLen = 95 * f;
 
