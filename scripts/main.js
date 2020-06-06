@@ -4,6 +4,9 @@
   //Defense
     require("blocks/defense/shieldgen");
 
+  //Turrets
+    require("blocks/turrets/tesla");
+
   //Walls
     require("blocks/walls/dirium");
 
