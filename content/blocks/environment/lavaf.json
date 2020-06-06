@@ -6,7 +6,7 @@
   "drownTime": 160,
   "drownUpdateEffect": "burning",
   "variants": 0,
-  "status": "shocked",
+  "status": "burning",
   "statusDuration": 90,
   "isLiquid": true,
   "liquidDrop": "lava",
