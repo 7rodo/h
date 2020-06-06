@@ -20,10 +20,10 @@ const teslaLaser = extend(BasicBulletType, {
     const colors = [color1, color2, Color.valueOf("ffffff")];
     const tscales = [0.5, 0.4, 0.3, 0.2];
     const lenscales = [1, 1.1, 1.13, 1.14];
-    const length = 95;
+    const length = 90;
 
     f = Mathf.curve(b.fin(), 0, 0.2);
-    baseLen = 95 * f;
+    baseLen = length * f;
 
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(s = 0; s < 3; s++){
