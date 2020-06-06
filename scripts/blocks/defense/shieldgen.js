@@ -27,6 +27,7 @@ const shieldGen = extendContent(ForceProjector, "shieldgen", {
       Draw.reset();
     }
     
+    Draq.rect(this.spinRegion, tile.drawx(), tile.drawy());
     Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
     
   }
