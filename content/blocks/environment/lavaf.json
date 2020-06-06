@@ -7,6 +7,7 @@
   "status": "shocked",
   "statusDuration": 90,
   "isLiquid": true,
-  "updateEffect": "ripple"
-  "cacheLayer": "tar"
+  "liquidDrop": "lava",
+  "updateEffect": "ripple",
+  "cacheLayer": "normal"
 }
