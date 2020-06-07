@@ -22,7 +22,7 @@ const shieldWall = extendContent(Wall, "shieldwall", {
   draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy());
     
-    if(tile.entity.power.statys > 0.001){
+    if(tile.entity.power.status > 0.001){
       Effects.effect(wallEffect, this);
     }
   },
