@@ -37,7 +37,7 @@ const teslaLaser = extend(BasicBulletType, {
   }
 });
 
-teslaLaser.speed = 5;
+teslaLaser.speed = 1;
 teslaLaser.lifetime = 15;
 teslaLaser.pierce = true;
 teslaLaser.hitSize = 6;
@@ -50,8 +50,8 @@ teslaLaser.shootEffect = Fx.none;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
-teslaLaser.lightining = 3;
-teslaLaser.lightningLength = 5;
+teslaLaser.lightining = 4;
+teslaLaser.lightningLength = 6;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
