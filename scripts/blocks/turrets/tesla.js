@@ -29,7 +29,7 @@ const teslaLaser = extend(BasicBulletType, {
       for(s = 0; s < 3; s++){
       Draw.color(colors[s]);
       for(i = 0; i < tscales.length; i++){
-        Lines.stroke(7 * b.fout() * (s == 0 ? 0.9 : s == 1 ? 1 : 0.2) * tscales[i]);
+        Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.5) * tscales[i]);
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
       }
     }
@@ -37,7 +37,7 @@ const teslaLaser = extend(BasicBulletType, {
   }
 });
 
-teslaLaser.speed = 9;
+teslaLaser.speed = 5;
 teslaLaser.lifetime = 15;
 teslaLaser.pierce = true;
 teslaLaser.hitSize = 6;
