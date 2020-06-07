@@ -33,7 +33,7 @@ const shieldWall = extendContent(Wall, "shieldwall", {
     }
   },
   
-  handleBulletHit(tile, entity, bullet){
+  handleBulletHit(entity, bullet){
       entity.damage(bullet.damage() / 3);  
     
     if(entity != null && bullet != null){
