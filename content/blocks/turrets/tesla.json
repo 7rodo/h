@@ -6,7 +6,7 @@
   "targetAir": false,
   "powerUse": 1.7,
   "shootSound": "tesla",
-  "shootCone": 12,
+  "shootCone": 1,
   "category": "turret",
   "requirements": [
     {"item": "lead", "amount": 55},
