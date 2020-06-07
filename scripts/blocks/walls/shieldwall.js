@@ -11,6 +11,7 @@ const wallEffect = newEffect(10, e => {
 const shieldWall = extendContent(Wall, "shieldwall", {
   load(){
     this.region = Core.atlas.find(this.name);
+    this.shieldRegion = Core.atlas.find(this.name + "-A");
   },
   
   generateIcons(){
