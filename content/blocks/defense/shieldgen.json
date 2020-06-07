@@ -3,9 +3,9 @@
   "health": 120,
   "radius": 55,
   "phaseRadiusBoost": 5,
-  "cooldownNormal": 1.15,
-  "cooldownLiquid": 0.75,
-  "cooldownBrokenBase": 0.1,
+  "cooldownNormal": 2.5,
+  "cooldownLiquid": 2.25,
+  "cooldownBrokenBase": 1.5,
   "breakage": 390,
   "consumes": {
     "power": 1,
