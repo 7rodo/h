@@ -22,9 +22,12 @@ const shieldWall = extendContent(Wall, "shieldwall", {
   draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy());
     
-    /*if(tile.entity.power.status > 0.001){
-      Effects.effect(wallEffect, tile.drawx(), tile.drawy(), tile.rotation());
-    }*/
+    if(tile.entity.power.status > 0.001){
+      Draw.color("73a4ff");
+      Draw.alpha(0.1);
+      Draw.rect(this.shieldRegion, tile.drawx(), tile.drawy());
+      Draw.reset();
+    }
   },
   
   onDestroyed(tile){
