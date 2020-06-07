@@ -1,6 +1,7 @@
 {
   "health": 980,
   "size": 1,
+  "expanded": true,
   "hasPower": true,
   "consumes": {
     "power": 0.3
