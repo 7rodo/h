@@ -1,0 +1,12 @@
+{
+  "health": 900,
+  "size": 1,
+  "hasPower": true,
+  "consumes": {
+    "power": 0.3
+  }
+  "category": "defense",
+  "requirements": [
+    {"item": "dirium", "amount": 6}
+  ]
+}
