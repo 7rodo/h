@@ -40,12 +40,12 @@ const shieldWall = extendContent(Wall, "shieldwall", {
   handleBulletHit(entity, bullet){
     if(entity.power.status > 0.001){  
       entity.damage(bullet.damage() / 3); 
+      
+      if(entity != null && bullet != null){
+        Effects.effect(wallEffect, entity.x, entity.y, entity.rotation - 90);
+      }
     } else {
         entity.damage(bullet.damage());
       }
-    
-    if(entity != null && bullet != null){
-      Effects.effect(wallEffect, entity.x, entity.y, entity.rotation - 90);
-    }
   }
 });
