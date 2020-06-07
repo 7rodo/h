@@ -1,11 +1,11 @@
-const wallEffect = newEffect(10, e => {
+const wallEffect = newEffect(15, e => {
   Draw.color(Color.valueOf("73a4ff"));
   Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 7 + e.fin() * 4);
+  Lines.square(e.x, e.y, 4 + e.fin() * 4);
   
   Draw.color(Color.valueOf("91b7ff"));
   Draw.alpha(0.2);
-  Fill.square(e.x, e.y, 7 + e.fin() * 4);
+  Fill.square(e.x, e.y, 4 + e.fin() * 4);
 });
 
 const shieldWall = extendContent(Wall, "shieldwall", {
