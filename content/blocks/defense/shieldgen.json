@@ -1,9 +1,12 @@
 {
   "size": 1,
   "health": 120,
-  "radius": 60,
+  "radius": 55,
   "phaseRadiusBoost": 5,
-  "breakage": 390,
+  "cooldownNormal": 1.15,
+  "cooldownLiquid": 0.75,
+  "cooldownBrokenBase": 0.1,
+  "breakage": 290,
   "consumes": {
     "power": 1,
     "items": {
