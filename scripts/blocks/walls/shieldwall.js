@@ -22,9 +22,9 @@ const shieldWall = extendContent(Wall, "shieldwall", {
   draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy());
     
-    if(tile.entity.power.status > 0.001){
+    /*if(tile.entity.power.status > 0.001){
       Effects.effect(wallEffect, tile.drawx(), tile.drawy(), tile.rotation());
-    }
+    }*/
   },
   
   onDestroyed(tile){
@@ -34,11 +34,7 @@ const shieldWall = extendContent(Wall, "shieldwall", {
   },
   
   handleBulletHit(tile, entity, bullet){
-    if(tile.entity.power.status > 0.001){
       entity.damage(bullet.damage() / 3);  
-    } else {
-        entity.damage(bullet.damage());
-      }
     
     if(entity != null && bullet != null){
       Effects.effect(wallEffect, entity.x, entity.y, entity.rotation - 90);
