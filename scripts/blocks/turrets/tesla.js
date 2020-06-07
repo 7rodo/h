@@ -20,7 +20,7 @@ const teslaLaser = extend(BasicBulletType, {
     const colors = [color1, color2, Color.valueOf("ffffff")];
     const tscales = [0.5, 0.4, 0.3, 0.2];
     const lenscales = [1, 1.1, 1.13, 1.14];
-    const length = 90;
+    const length = 50;
 
     f = Mathf.curve(b.fin(), 0, 0.2);
     baseLen = length * f;
@@ -39,7 +39,7 @@ const teslaLaser = extend(BasicBulletType, {
 
 teslaLaser.lifetime = 45;
 teslaLaser.pierce = true;
-teslaLaser.hitSize = 1;
+teslaLaser.hitSize = 4;
 teslaLaser.collides = true;
 teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
