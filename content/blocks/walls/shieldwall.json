@@ -7,6 +7,7 @@
   },
   "category": "defense",
   "requirements": [
-    {"item": "dirium", "amount": 6}
+    {"item": "silicon", "amount": 6},
+    {"item": "titanium", "amount": 18}
   ]
 }
