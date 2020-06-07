@@ -51,6 +51,8 @@ teslaLaser.shootEffect = Fx.none;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
+teslaLaser.lightining = 4;
+teslaLaser.lightningLength = 7
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
