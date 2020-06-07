@@ -6,7 +6,7 @@
   "cooldownNormal": 2.5,
   "cooldownLiquid": 2.25,
   "cooldownBrokenBase": 1.5,
-  "breakage": 390,
+  "breakage": 450,
   "consumes": {
     "power": 1,
     "items": {
