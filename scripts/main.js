@@ -8,6 +8,7 @@
     require("blocks/turrets/tesla");
 
   //Walls
+    require("blocks/walls/shieldwall");
     require("blocks/walls/dirium");
 
 //Resources & Materials
