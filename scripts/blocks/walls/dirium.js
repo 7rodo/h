@@ -1,13 +1,13 @@
 const wallEffect = newEffect(10, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 7 + e.fin() * 4);
+  Lines.square(e.x, e.y, 7 + e.fout() * 4);
 });
                              
 const wallEffectLarge = newEffect(10, e => {
   Draw.color(Color.valueOf("8fdbb2"), Color.valueOf("7ec49f"), e.fin());
   Lines.stroke(e.fout() * 3);
-  Lines.square(e.x, e.y, 10 + e.fin() * 4);
+  Lines.square(e.x, e.y, 10 + e.fout() * 4);
 });                            
                               
 const dirWall = extendContent(Wall, "diriumwall", {
@@ -34,12 +34,12 @@ const dirWall = extendContent(Wall, "diriumwall", {
   },
   
   handleBulletHit(entity, bullet){
-  entity.damage(bullet.damage() - 5);  
+    entity.damage(bullet.damage() - 5);  
   
-  if(entity != null && bullet != null){
+    if(entity != null && bullet != null){
     Effects.effect(wallEffect, entity.x, entity.y, entity.rotation - 90);
+    }
   }
-}
 });
 
 const dirWallLarge = extendContent(Wall, "diriumwalllarge", {
@@ -66,12 +66,12 @@ const dirWallLarge = extendContent(Wall, "diriumwalllarge", {
   },
   
   handleBulletHit(entity, bullet){
-  entity.damage(bullet.damage() - 5);
+    entity.damage(bullet.damage() - 5);
     
-  if(entity != null && bullet != null){
-    Effects.effect(wallEffectLarge, entity.x, entity.y, entity.rotation - 90);
+    if(entity != null && bullet != null){
+      Effects.effect(wallEffectLarge, entity.x, entity.y, entity.rotation - 90);
+    }
   }
-}
 });
 
 //Thanks to @GlennFolker for making the handleBulletHit finally working.
