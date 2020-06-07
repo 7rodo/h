@@ -37,7 +37,7 @@ const teslaLaser = extend(BasicBulletType, {
   }
 });
 
-teslaLaser.lifetime = 45;
+teslaLaser.lifetime = 15;
 teslaLaser.pierce = true;
 teslaLaser.hitSize = 4;
 teslaLaser.collides = true;
