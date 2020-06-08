@@ -24,10 +24,10 @@ const teslaShoot = newEffect(21, e => {
   Fill.circle(e.x, e.y, e.fin() * 4);
 });
 
-const colors = [color1, color2, Color.valueOf("ffffff")];
-const tscales = [0.3, 0.2, 0.15, 0.1];
-const lenscales = [1, 1.1, 1.13, 1.14];
-const length = 9;
+const colors1 = [color1, color2, Color.valueOf("ffffff")];
+const tscales1 = [0.3, 0.2, 0.15, 0.1];
+const lenscales1 = [1, 1.1, 1.13, 1.14];
+const length1 = 9;
 
 const teslaFrag = extend(BasicBulletType, {
   update(b){
