@@ -30,8 +30,8 @@ const lenscales = [1, 1.1, 1.13, 1.14];
 const length = 99;
 
 const teslaLaser = extend(BasicBulletType, {
-  init(b){
-    Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
+  update(b){
+      Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
   },  
   draw(b){
     f = Mathf.curve(b.fin(), 0, 0.2);
