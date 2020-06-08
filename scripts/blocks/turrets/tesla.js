@@ -24,13 +24,16 @@ const teslaShoot = newEffect(21, e => {
   Fill.circle(e.x, e.y, e.fin() * 4);
 });
 
-const teslaLaser = extend(BasicBulletType, {
-  draw(b){
-    const colors = [color1, color2, Color.valueOf("ffffff")];
-    const tscales = [0.5, 0.4, 0.3, 0.2];
-    const lenscales = [1, 1.1, 1.13, 1.14];
-    const length = 99;
+const colors = [color1, color2, Color.valueOf("ffffff")];
+const tscales = [0.5, 0.4, 0.3, 0.2];
+const lenscales = [1, 1.1, 1.13, 1.14];
+const length = 99;
 
+const teslaLaser = extend(BasicBulletType, {
+  init(b){
+    Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
+  },  
+  draw(b){
     f = Mathf.curve(b.fin(), 0, 0.2);
     baseLen = length * f;
 
@@ -38,7 +41,7 @@ const teslaLaser = extend(BasicBulletType, {
       for(s = 0; s < 3; s++){
       Draw.color(colors[s]);
       for(i = 0; i < tscales.length; i++){
-        Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.5) * tscales[i]);
+        Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
       }
     }
