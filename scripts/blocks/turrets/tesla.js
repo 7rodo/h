@@ -10,7 +10,7 @@ const teslaSmoke = newEffect(65, e => {
 });
 
 const laserShoot = newEffect(21, e => {
-  for(var h = 0; h < 2; h++){
+  for(var h = 0; h < 6; h++){
     var hh = Mathf.signs[i];
     Drawf.tri(e.x, e.y, 4 * e.fout(), 29, e.rotation + 90 * hh);
   }
@@ -64,5 +64,5 @@ teslaLaser.lightningLength = 6;
 const tesla = extendContent(PowerTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
-tesla.shootEffect = teslaShoot;
+tesla.shootEffect = laserShoot;
 tesla.smokeEffect = teslaSmoke;
