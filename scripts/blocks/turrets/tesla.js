@@ -53,7 +53,7 @@ teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
 teslaLaser.collidesTiles = false;
 teslaLaser.damage = 16;
-teslaLaser.shootEffect = Fx.lightningShoot;
+teslaLaser.shootEffect = Fx.lancerLaserCharge;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
@@ -64,5 +64,5 @@ teslaLaser.lightningLength = 6;
 const tesla = extendContent(PowerTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
-tesla.shootEffect = Fx.lightningShoot;
+tesla.shootEffect = Fx.lancerLaserCharge;
 tesla.smokeEffect = teslaSmoke;
