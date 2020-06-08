@@ -49,20 +49,20 @@ const teslaLaser = extend(BasicBulletType, {
   }
 });
 
-teslaLaser.speed = 1;
-teslaLaser.lifetime = 15;
+teslaLaser.speed = 0.9;
+teslaLaser.lifetime = 13;
 teslaLaser.pierce = true;
 teslaLaser.hitSize = 6;
 teslaLaser.collides = true;
 teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
 teslaLaser.collidesTiles = false;
-teslaLaser.damage = 16;
+teslaLaser.damage = 4;
 teslaLaser.shootEffect = laserShoot;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
-teslaLaser.fragBullet = BulletType.lightning;
+teslaLaser.fragBullet = Bullets.lightning;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
