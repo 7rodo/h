@@ -31,7 +31,7 @@ const length = 99;
 
 const teslaLaser = extend(BasicBulletType, {
   update(b){
-      Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
+    Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
   },  
   draw(b){
     f = Mathf.curve(b.fin(), 0, 0.2);
