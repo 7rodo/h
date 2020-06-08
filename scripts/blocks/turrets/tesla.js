@@ -1,12 +1,12 @@
 const color1 = Color.valueOf("fafafa");
 const color2 = Color.valueOf("ebebeb");
 
-const teslaSmoke = newEffect(65, e => {
+const teslaSmoke = newEffect(30, e => {
   Draw.color(color1);
-  Fill.circle(e.x, e.y, e.fin() * 3);
+  Fill.circle(e.x, e.y, e.fin() * 4);
 
   Draw.color(color2);
-  Fill.circle(e.x, e.y, e.fin() * 2);
+  Fill.circle(e.x, e.y, e.fin() * 3);
 });
 
 const laserShoot = newEffect(21, e => {
@@ -53,7 +53,7 @@ teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
 teslaLaser.collidesTiles = false;
 teslaLaser.damage = 16;
-teslaLaser.shootEffect = laserShoot;
+teslaLaser.shootEffect = Fx.lancerLaserCharge;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
@@ -64,5 +64,5 @@ teslaLaser.lightningLength = 6;
 const tesla = extendContent(PowerTurret, "tesla", {});
 
 tesla.shootType = teslaLaser;
-tesla.shootEffect = laserShoot;
+tesla.shootEffect = Fx.lancerLaserCharge;
 tesla.smokeEffect = teslaSmoke;
