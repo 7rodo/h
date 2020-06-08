@@ -1,0 +1,15 @@
+{
+  "health": 320,
+  "reload": 30,
+  "size": 2,
+  "range": 99,
+  "targetAir": false,
+  "powerUse": 1.85,
+  "shootSound": "laser",
+  "shootCone": 0.6,
+  "category": "turret",
+  "requirements": [
+    {"item": "titanium", "amount": 50},
+    {"item": "silicon", "amount": 40}
+  ]
+}
