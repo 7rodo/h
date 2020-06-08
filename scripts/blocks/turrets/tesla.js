@@ -25,6 +25,45 @@ const teslaShoot = newEffect(21, e => {
 });
 
 const colors = [color1, color2, Color.valueOf("ffffff")];
+const tscales = [0.3, 0.2, 0.15, 0.1];
+const lenscales = [1, 1.1, 1.13, 1.14];
+const length = 9;
+
+const teslaFrag = extend(BasicBulletType, {
+  update(b){
+    Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length1);
+  },  
+  draw(b){
+    f1 = Mathf.curve(b.fin(), 0, 0.2);
+    baseLen1 = length1 * f1;
+
+    Lines.lineAngle(b.x, b.y, b.rot(), baseLen1);
+      for(p = 0; p < 3; p++){
+      Draw.color(colors1[p]);
+      for(g = 0; g < tscales.length; g++){
+        Lines.stroke(7 * b.fout() * (s == 0 ? 1 : s == 1 ? 1 : 0.1) * tscales1[g]);
+        Lines.lineAngle(b.x, b.y, b.rot(), baseLen1 * lenscales1[g]);
+      }
+    }
+    Draw.reset();
+  }
+});
+
+teslaFrag.speed = 0.9;
+teslaLaser.lifetime = 13;
+teslaLaser.pierce = true;
+teslaLaser.hitSize = 3;
+teslaLaser.collides = true;
+teslaLaser.collidesGround = true;
+teslaLaser.collidesAir = false;
+teslaLaser.collidesTiles = false;
+teslaLaser.damage = 0.9;
+teslaLaser.shootEffect = Fx.none;
+teslaLaser.smokeEffect = Fx.none;
+teslaLaser.despawnEffect = Fx.none;
+teslaLaser.hitEffect = Fx.none;
+
+const colors = [color1, color2, Color.valueOf("ffffff")];
 const tscales = [0.5, 0.4, 0.3, 0.2];
 const lenscales = [1, 1.1, 1.13, 1.14];
 const length = 99;
@@ -64,11 +103,10 @@ teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
 teslaLaser.lightining = 4;
 teslaLaser.lightingLength = 6;
-teslaLaser.fragBullet = teslaLaser;
+teslaLaser.fragBullet = teslaFrag;
 teslaLaser.fragBullets = 3;
 teslaLaser.fragVelocityMin = 0.12;
 teslaLaser.fragVelocityMax = 0.4;
-
 teslaLaser.hitShake = 0.2;
 
 
