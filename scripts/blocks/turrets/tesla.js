@@ -13,7 +13,7 @@ const laserShoot = newEffect(21, e => {
   for(var h = 0; h < 2; h++){
     var hh = Mathf.signs[i];
     Drawf.tri(e.x, e.y, 4 * e.fout(), 29, e.rotation + 90 * hh);
-}
+  }
 }
 
 const teslaShoot = newEffect(21, e => {
