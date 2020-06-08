@@ -62,7 +62,7 @@ teslaLaser.shootEffect = laserShoot;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
-teslaLaser.fragBullet = Bullets.lightning;
+teslaLaser.fragBullet = Bullets.arc;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
