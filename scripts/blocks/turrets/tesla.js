@@ -49,8 +49,8 @@ const teslaFrag = extend(BasicBulletType, {
   }
 });
 
-teslaFrag.speed = 0.9;
-teslaFrag.lifetime = 13;
+teslaFrag.speed = 1.1;
+teslaFrag.lifetime = 9;
 teslaFrag.pierce = true;
 teslaFrag.hitSize = 3;
 teslaFrag.collides = true;
