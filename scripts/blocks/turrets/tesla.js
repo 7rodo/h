@@ -57,12 +57,14 @@ teslaLaser.collides = true;
 teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
 teslaLaser.collidesTiles = false;
-teslaLaser.damage = 4;
+teslaLaser.damage = 2;
 teslaLaser.shootEffect = laserShoot;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
-teslaLaser.fragBullet = Bullets.arc;
+teslaLaser.lightining = 4;
+teslaLaser.lightingLength = 6;
+teslaLaser.hitShake = 0.2;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
