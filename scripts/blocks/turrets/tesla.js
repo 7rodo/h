@@ -64,6 +64,11 @@ teslaLaser.despawnEffect = Fx.none;
 teslaLaser.hitEffect = Fx.none;
 teslaLaser.lightining = 4;
 teslaLaser.lightingLength = 6;
+teslaLaser.fragBullet = teslaLaser;
+teslaLaser.fragBullets = 3;
+teslaLaser.fragVelocityMin = 0.12;
+teslaLaser.fragVelocityMax = 0.4;
+
 teslaLaser.hitShake = 0.2;
 
 
