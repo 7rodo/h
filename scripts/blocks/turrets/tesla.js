@@ -50,18 +50,18 @@ const teslaFrag = extend(BasicBulletType, {
 });
 
 teslaFrag.speed = 0.9;
-teslaLaser.lifetime = 13;
-teslaLaser.pierce = true;
-teslaLaser.hitSize = 3;
-teslaLaser.collides = true;
-teslaLaser.collidesGround = true;
-teslaLaser.collidesAir = false;
-teslaLaser.collidesTiles = false;
-teslaLaser.damage = 0.9;
-teslaLaser.shootEffect = Fx.none;
-teslaLaser.smokeEffect = Fx.none;
-teslaLaser.despawnEffect = Fx.none;
-teslaLaser.hitEffect = Fx.none;
+teslaFrag.lifetime = 13;
+teslaFrag.pierce = true;
+teslaFrag.hitSize = 3;
+teslaFrag.collides = true;
+teslaFrag.collidesGround = true;
+teslaFrag.collidesAir = false;
+teslaFrag.collidesTiles = false;
+teslaFrag.damage = 0.4;
+teslaFrag.shootEffect = Fx.none;
+teslaFrag.smokeEffect = Fx.none;
+teslaFrag.despawnEffect = Fx.none;
+teslaFrag.hitEffect = Fx.none;
 
 const colors = [color1, color2, Color.valueOf("ffffff")];
 const tscales = [0.5, 0.4, 0.3, 0.2];
