@@ -77,3 +77,5 @@ const pulse = extendContent(PowerTurret, "pulse", {
     
   }
 });
+
+pulse.shootType = pulseRad;
