@@ -1,4 +1,4 @@
-
+const primeColor = Color.valueOf("dbef2");
 
 const disabled = new StatusEffect("disabled");
   disabled.damageMultiplier = 0;
@@ -8,6 +8,18 @@ const disabled = new StatusEffect("disabled");
   disanled.effect = Fx.none;
   disabled.color = primeColor;
 
+const pulseCircle = newEffect(120, e => {
+  Draw.color(primeColor);
+  
+  Lines.stroke(e.fout() * 9);
+  Lines.circle(e.x, e.y, e.fin() * 15);
+});
+
+const pulseRad = extend(BasicBullrtType, {
+  draw(b){
+    Effects.effect(pulseCircle, tile.drawx(), tile.drawy());
+  }
+});
 
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
