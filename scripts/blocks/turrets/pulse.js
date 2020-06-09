@@ -1,3 +1,14 @@
+
+
+const disabled = new StatusEffect("disabled");
+  disabled.damageMultiplier = 0;
+  disabled.armorMultiplier = 0.8;
+  disabled.speedMultiplier = 0;
+  disabled.damage = 0;
+  disanled.effect = Fx.none;
+  disabled.color = primeColor;
+
+
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
     this.region = Core.atlas.find(this.name);
