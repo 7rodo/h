@@ -1,6 +1,7 @@
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
     this.region = Core.atlas.find(this.name);
+    this.heatRegion = Core.atlas.find(this.name + "-heat");
     this.baseRegion = Core.atlas.find(this.name + "-base");
     this.spinRegion = Core.atlas.find(this.name + "-spin");
   },
@@ -25,5 +26,4 @@ const pulse = extendContent(PowerTurret, "pulse", {
   shouldTurn(tile){
     
   }
-  
 });
