@@ -21,7 +21,7 @@ const pulseHit = newEffect(20, e => {
   Draw.color(primeColor, secColor, e,fin());
   
   Lines.square(e.x, e.y, 4 + e.fin() * 3)
-}
+});
 
 const pulseCircle = newEffect(120, e => {
   Draw.color(primeColor);
