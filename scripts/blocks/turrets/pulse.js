@@ -1,4 +1,4 @@
-const primeColor = Color.valueOf("dbef2");
+const primeColor = Color.valueOf("8dbef2");
 
 const disabled = new StatusEffect("disabled");
   disabled.damageMultiplier = 0;
