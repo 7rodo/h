@@ -6,6 +6,7 @@
 
   //Turrets
     require("blocks/turrets/tesla");
+    require("blocks/turrets/pulse");
 
   //Walls
     require("blocks/walls/shieldwall");
