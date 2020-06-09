@@ -32,7 +32,7 @@ const pulseCircle = newEffect(120, e => {
 
 const pulseRad = extend(BasicBulletType, {
   draw(b){
-    Effects.effect(pulseCircle, tile.drawx(), tile.drawy());
+    Effects.effect(pulseCircle, b.x, b.y);
   }
 });
 
