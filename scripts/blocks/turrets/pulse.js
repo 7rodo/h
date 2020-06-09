@@ -20,7 +20,7 @@ disabled.color = primeColor;
 const pulseHit = newEffect(15, e => {
   Draw.color(primeColor, secColor, e.fin());
   
-  Fil;.square(e.x, e.y, 4 + e.fin() * 3)
+  Fill.square(e.x, e.y, 4 + e.fin() * 3)
 });
 
 const pulseCircle = newEffect(420, e => {
