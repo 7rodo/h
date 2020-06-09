@@ -31,14 +31,13 @@ const pulseCircle = newEffect(190, e => {
 });
 
 const pulseRad = extend(BasicBulletType, {
-  draw(tile, b){
-    Effects.effect(pulseCircle, tile.drawx(), tile.drawy());
+  draw(b){
   }
 });
 
 pulseRad.speed = 4;
 pulseRad.lifetime = 180;
-pulseRad.damage = 0.000001;
+pulseRad.damage = 0;
 pulseRad.pierce = true;
 pulseRad.shootEffect = Fx.none;
 pulseRad.hitEfect = pulseHit;
@@ -83,3 +82,4 @@ const pulse = extendContent(PowerTurret, "pulse", {
 });
 
 pulse.shootType = pulseRad;
+pulse.shootEffect = pulseCircle;
