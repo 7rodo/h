@@ -1,7 +1,14 @@
 const primeColor = Color.valueOf("8dbef2");
 const secColor = Color.valueOf("9fcdff");
 
-const disabled = new StatusEffect("disabled");
+const disabled = extendContent(StatusEffect, "disabled", {
+  update(unit, time){
+    this.super$update(unit, time);
+    
+    unit.getTimer().get(unit.getShootTimer(true), 1);
+    unit.getTimer().get(unit.getShootTimer(false), 1);
+  }
+});
   disabled.damageMultiplier = 0;
   disabled.armorMultiplier = 0.8;
   disabled.speedMultiplier = 0;
