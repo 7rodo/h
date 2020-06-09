@@ -23,11 +23,11 @@ const pulseHit = newEffect(15, e => {
   Fill.square(e.x, e.y, 4 + e.fin() * 3)
 });
 
-const pulseCircle = newEffect(420, e => {
+const pulseCircle = newEffect(360, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x, e.y, e.fin() * 420);
+  Lines.circle(e.x, e.y, e.fin() * 200);
 });
 
 const pulseRad = extend(BasicBulletType, {
@@ -35,10 +35,10 @@ const pulseRad = extend(BasicBulletType, {
   }
 });
 
-pulseRad.speed = 3;
-pulseRad.lifetime = 420;
+pulseRad.speed = 4;
+pulseRad.lifetime = 360;
 pulseRad.damage = 0;
-pulseRad.pierce = true;
+pulseRad.pierce = false;
 pulseRad.shootEffect = pulseCircle;
 pulseRad.hitEffect = Fx.none;
 pulseRad.despawnEffect = Fx.none;
