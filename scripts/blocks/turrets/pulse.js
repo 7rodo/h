@@ -78,6 +78,7 @@ const pulse = extendContent(PowerTurret, "pulse", {
   
   shouldTurn(tile){
     this.super$shouldTurn(tile);
+    return true;
   }
 });
 
