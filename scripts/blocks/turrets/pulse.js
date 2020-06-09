@@ -9,12 +9,13 @@ const disabled = extendContent(StatusEffect, "disabled", {
     unit.getTimer().get(unit.getShootTimer(false), 1);
   }
 });
-  disabled.damageMultiplier = 0;
-  disabled.armorMultiplier = 0.8;
-  disabled.speedMultiplier = 0;
-  disabled.damage = 0;
-  disabled.effect = Fx.none;
-  disabled.color = primeColor;
+
+disabled.damageMultiplier = 0;
+disabled.armorMultiplier = 0.8;
+disabled.speedMultiplier = 0;
+disabled.damage = 0;
+disabled.effect = Fx.none;
+disabled.color = primeColor;
 
 const pulseHit = newEffect(20, e => {
   Draw.color(primeColor, secColor, e,fin());
