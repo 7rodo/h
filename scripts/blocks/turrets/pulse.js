@@ -17,17 +17,17 @@ disabled.damage = 0;
 disabled.effect = Fx.none;
 disabled.color = primeColor;
 
-const pulseHit = newEffect(20, e => {
+const pulseHit = newEffect(15, e => {
   Draw.color(primeColor, secColor, e.fin());
   
-  Lines.square(e.x, e.y, 4 + e.fin() * 3)
+  Fil;.square(e.x, e.y, 4 + e.fin() * 3)
 });
 
 const pulseCircle = newEffect(420, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x * 20, e.y * 20, e.fin() * 60);
+  Lines.circle(e.x, e.y, e.fin() * 600);
 });
 
 const pulseRad = extend(BasicBulletType, {
