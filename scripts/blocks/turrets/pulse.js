@@ -18,7 +18,7 @@ disabled.effect = Fx.none;
 disabled.color = primeColor;
 
 const pulseHit = newEffect(20, e => {
-  Draw.color(primeColor, secColor, e,fin());
+  Draw.color(primeColor, secColor, e.fin());
   
   Lines.square(e.x, e.y, 4 + e.fin() * 3)
 });
