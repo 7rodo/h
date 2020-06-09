@@ -6,7 +6,7 @@ const disabled = new StatusEffect("disabled");
   disabled.armorMultiplier = 0.8;
   disabled.speedMultiplier = 0;
   disabled.damage = 0;
-  disanled.effect = Fx.none;
+  disabled.effect = Fx.none;
   disabled.color = primeColor;
 
 const pulseHit = newEffect(20, e => {
