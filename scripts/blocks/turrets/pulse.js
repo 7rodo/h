@@ -23,7 +23,7 @@ const pulseHit = newEffect(20, e => {
   Lines.square(e.x, e.y, 4 + e.fin() * 3)
 });
 
-const pulseCircle = newEffect(120, e => {
+const pulseCircle = newEffect(190, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 9);
@@ -31,13 +31,13 @@ const pulseCircle = newEffect(120, e => {
 });
 
 const pulseRad = extend(BasicBulletType, {
-  draw(b){
-    Effects.effect(pulseCircle, b.x, b.y);
+  draw(tile, b){
+    Effects.effect(pulseCircle, tile.drawx(), tile.drawy();
   }
 });
 
-pulseRad.speed = 0.8;
-pulseRad.lifetime = 60;
+pulseRad.speed = 4;
+pulseRad.lifetime = 180;
 pulseRad.damage = 0.000001;
 pulseRad.pierce = true;
 pulseRad.shootEffect = Fx.none;
