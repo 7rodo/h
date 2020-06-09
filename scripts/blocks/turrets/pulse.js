@@ -23,7 +23,7 @@ const pulseHit = newEffect(20, e => {
   Lines.square(e.x, e.y, 4 + e.fin() * 3)
 });
 
-const pulseCircle = newEffect(690, e => {
+const pulseCircle = newEffect(420, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 8);
