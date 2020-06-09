@@ -39,8 +39,8 @@ pulseRad.speed = 3;
 pulseRad.lifetime = 120;
 pulseRad.damage = 0;
 pulseRad.pierce = true;
-pulseRad.shootEffect = Fx.none;
-pulseRad.hitEffect = pulseHit;
+pulseRad.shootEffect = pulseCircle;
+pulseRad.hitEffect = Fx.none;
 pulseRad.despawnEffect = Fx.none;
 pulseRad.smokeEffect = Fx.none;
 pulseRad.status = disabled;
@@ -82,4 +82,3 @@ const pulse = extendContent(PowerTurret, "pulse", {
 });
 
 pulse.shootType = pulseRad;
-pulse.shootEffect = pulseCircle;
