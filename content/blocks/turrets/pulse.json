@@ -1,8 +1,8 @@
 {
   "health": 1320,
-  "reload": 120,
+  "reload": 360,
   "size": 2,
-  "range": 100,
+  "range": 180,
   "powerUse": 3.86,
   "shootSound": "laser",
   "shootCone": 360,
