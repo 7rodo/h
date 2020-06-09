@@ -38,7 +38,7 @@ const pulseRad = extend(BasicBulletType, {
 
 pulseRad.speed = 0.1;
 pulseRad.lifetime = 9;
-pulseRad.damage = 0;
+pulseRad.damage = 0.000001;
 pulseRad.pierce = true;
 pulseRad.shootEffect = Fx.none;
 pulseRad.hitEfect = pulseHit;
