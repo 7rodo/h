@@ -1,4 +1,5 @@
 const primeColor = Color.valueOf("8dbef2");
+const secColor = Color.valueOf("9fcdff");
 
 const disabled = new StatusEffect("disabled");
   disabled.damageMultiplier = 0;
@@ -7,6 +8,12 @@ const disabled = new StatusEffect("disabled");
   disabled.damage = 0;
   disanled.effect = Fx.none;
   disabled.color = primeColor;
+
+const pulseHit = newEffect(20, e => {
+  Draw.color(primeColor, secColor, e,fin());
+  
+  Lines.square(e.x, e.y, 4 + e.fin() * 3)
+}
 
 const pulseCircle = newEffect(120, e => {
   Draw.color(primeColor);
