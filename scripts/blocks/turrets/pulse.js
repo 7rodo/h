@@ -27,7 +27,7 @@ const pulseCircle = newEffect(360, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x, e.y, e.fin() * 140);
+  Lines.circle(e.x, e.y, e.fin() * 170);
 });
 
 const pulseRad = extend(BasicBulletType, {
@@ -40,6 +40,8 @@ pulseRad.lifetime = 360;
 pulseRad.damage = 0;
 pulseRad.pierce = true;
 pulseRad.hitSize = 420;
+pulseRad.splashDamage = 0;
+pulseRad.splashDamageRadius = 250;
 pulseRad.shootEffect = pulseCircle;
 pulseRad.hitEffect = Fx.none;
 pulseRad.despawnEffect = Fx.none;
