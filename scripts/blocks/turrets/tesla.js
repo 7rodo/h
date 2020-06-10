@@ -46,15 +46,13 @@ const teslaFrag = extend(BasicBulletType, {
 });
 */
 
-teslaFrag.speed = 1.1;
-teslaFrag.lifetime = 9;
+teslaFrag.lifetime = 1;
 teslaFrag.pierce = true;
 teslaFrag.hitSize = 3;
 teslaFrag.collides = true;
 teslaFrag.collidesGround = true;
 teslaFrag.collidesAir = false;
 teslaFrag.collidesTiles = false;
-teslaFrag.damage = 0.26;
 teslaFrag.shootEffect = Fx.none;
 teslaFrag.smokeEffect = Fx.none;
 teslaFrag.despawnEffect = Fx.none;
