@@ -71,65 +71,29 @@ teslaFrag.smokeEffect = Fx.none;
 teslaFrag.despawnEffect = Fx.none;
 teslaFrag.hitEffect = Fx.none;
 */
+const colors = [color1, color2, Color.valueOf("ffffff")];
+const tscales = [0.5, 0.4, 0.3, 0.2];
+const lenscales = [1, 1.1, 1.13, 1.14];
+const length = 99;
 
 const teslaLaser = extend(BasicBulletType, {
   update(b){
-    const trnsb = new Vec2();		
-      //Effects.shake(1.2, 1.2, b.x, b.y);			
-      if(b.timer.get(1, 5) && b.getData() != null){			
-        b.getData()[1] = true;			
-        Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), Math.min(length, b.getData()[0]), true);			
-        //b.getData()[1] = true;		
-      }
+    Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length, true);			
   },  
   
-  hit(b, hitx, hity){
-    if(hitx != null && hity != null && b.getData() != null && b.getData()[1]){			
-      //var angle = Angles.angle(b.x, b.y, hitx, hity);			
-      Effects.effect(this.hitEffect, hitx, hity, b.rot());			
-      len = Mathf.dst(b.x, b.y, hitx, hity);			
-      b.getData()[0] = len;			
-      b.getData()[1] = false;			
-      //b.setData(len);	
-      
-      //Stolen from AdvanceContent's Eclipse hit(b, hitx, hity)
-    }
-  },
-  
   draw(b){
-    if(b.getData()[0] == null){
-      return		
-    };
-    
-    const colors = [color1, color2, Color.valueOf("ffffff")];
-    const tscales = [0.5, 0.4, 0.3, 0.2];
-    const lenscales = [1, 1.1, 1.13, 1.14];
-    const length = 99;
-    const lengthA = 120
     const f = Mathf.curve(b.fin(), 0, 0.1);
     const baseLen = length * f;
-    const tmpColor = new Color();
 
-    /*Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+    Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(s = 0; s < 3; s++){
-      Draw.color(colors[s]);
+      Draw.color(colors[s])
       for(i = 0; i < tscales.length; i++){
         Lines.stroke(7 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales[i]);
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
       }
     }
-    Draw.reset();*/
-    
-    for(var s = 0; s < 4; s++){
-      Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.2, 0.4)));
-      for(var i = 0; i < 4; i++){
-        Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 0.8) * 55.0);
-        Lines.stroke((9 + Mathf.absin(Time.time(), 1.7, 3.1)) * b.fout() * strokes[s] * tscales[i]);
-        Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), (Math.min(this.lengthA, b.getData()[0]) * lenscales[i]) * 1.12, CapStyle.none);
-      }		
-    };
     Draw.reset();
-  }
 });
 
 teslaLaser.speed = 0.9;
