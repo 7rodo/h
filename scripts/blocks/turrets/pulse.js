@@ -27,7 +27,7 @@ const pulseCircle = newEffect(360, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x, e.y, e.fin() * 200);
+  Lines.circle(e.x, e.y, e.fin() * 140);
 });
 
 const pulseRad = extend(BasicBulletType, {
@@ -35,16 +35,17 @@ const pulseRad = extend(BasicBulletType, {
   }
 });
 
-pulseRad.speed = 9;
+pulseRad.speed = 5;
 pulseRad.lifetime = 360;
 pulseRad.damage = 0;
 pulseRad.pierce = true;
+pulseRad.hitSize = 420;
 pulseRad.shootEffect = pulseCircle;
 pulseRad.hitEffect = Fx.none;
 pulseRad.despawnEffect = Fx.none;
 pulseRad.smokeEffect = Fx.none;
 pulseRad.status = disabled;
-pulseRad.statusDuration = 800;
+pulseRad.statusDuration = 360;
 
 
 const pulse = extendContent(PowerTurret, "pulse", {
