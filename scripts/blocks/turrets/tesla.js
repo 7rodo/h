@@ -82,7 +82,7 @@ const teslaLaser = extend(BasicBulletType, {
   hit(b, hitx, hity){
    	if(hitx != null && hity != null && b.getData() != null && b.getData()[1]){			
       //var angle = Angles.angle(b.x, b.y, hitx, hity);			
-      Effects.effect(this.pulseHit, hitx, hity, b.rot());			
+      Effects.effect(this.hitEffect, hitx, hity, b.rot());			
       len = Mathf.dst(b.x, b.y, hitx, hity);			
       b.getData()[0] = len;			
       b.getData()[1] = false;			
