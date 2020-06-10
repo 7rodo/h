@@ -21,42 +21,31 @@ const laserShoot = newEffect(21, e => {
 const teslaShoot = newEffect(21, e => {
   Draw.color(color1);
 
-  Fill.circle(e.x, e.y, e.fin() * 4);
+  Fill.circle(e.x, e.y, e.fin() * 8);
 });
 
 const teslaHit = newEffect(21, e => {
-  Draw.color(color1);
+  Draw.color(color1, color2, e.fin());
 
   Fill.circle(e.x, e.y, e.fin() * 4);
 });
 
-/*const colors1 = [color1, color2, Color.valueOf("ffffff")];
-const tscales1 = [0.3, 0.2, 0.15, 0.1];
-const lenscales1 = [1, 1.1, 1.13, 1.14];
+const colors1 = [color1, color2, Color.valueOf("ffffff")];
+//const tscales1 = [0.3, 0.2, 0.15, 0.1];
+//const lenscales1 = [1, 1.1, 1.13, 1.14];
 const length1 = 9;
-*/
-/*
+
 const teslaFrag = extend(BasicBulletType, {
   update(b){
-    Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length1);
+    Lightning.create(b.getTeam(), colors1, 1, b.x, b.y, b.rot(), length1)
   },  
+                     
   draw(b){
-    f1 = Mathf.curve(b.fin(), 0, 0.2);
-    baseLen1 = length1 * f1;
-
-    Lines.lineAngle(b.x, b.y, b.rot(), baseLen1);
-      for(p = 0; p < 3; p++){
-      Draw.color(colors1[p]);
-      for(g = 0; g < tscales.length; g++){
-        Lines.stroke(7 * b.fout() * (s == 0 ? 1 : s == 1 ? 1 : 0.1) * tscales1[g]);
-        Lines.lineAngle(b.x, b.y, b.rot(), baseLen1 * lenscales1[g]);
-      }
-    }
-    Draw.reset();
   }
+
 });
 */
-/*
+
 teslaFrag.speed = 1.1;
 teslaFrag.lifetime = 9;
 teslaFrag.pierce = true;
@@ -70,7 +59,7 @@ teslaFrag.shootEffect = Fx.none;
 teslaFrag.smokeEffect = Fx.none;
 teslaFrag.despawnEffect = Fx.none;
 teslaFrag.hitEffect = Fx.none;
-*/
+
 const colors = [color1, color2, Color.valueOf("ffffff")];
 const tscales = [0.5, 0.4, 0.3, 0.2];
 const lenscales = [1, 1.1, 1.13, 1.14];
@@ -106,20 +95,20 @@ teslaLaser.collides = true;
 teslaLaser.collidesGround = true;
 teslaLaser.collidesAir = false;
 teslaLaser.collidesTiles = false;
-teslaLaser.damage = 2;
+teslaLaser.damage = 1.775;
 teslaLaser.shootEffect = laserShoot;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
-teslaLaser.hitEffect = teslaHit;
+teslaLaser.hitEffect = Fx.none;
 /*
 teslaLaser.lightining = 4;
 teslaLaser.lightingLength = 6;
+*/
 teslaLaser.fragBullet = teslaFrag;
 teslaLaser.fragBullets = 2;
 teslaLaser.fragVelocityMin = 0;
 teslaLaser.fragVelocityMax = 0.2;
-teslaLaser.hitShake = 0.2;
-*/
+//teslaLaser.hitShake = 0.2;
 
 
 const tesla = extendContent(PowerTurret, "tesla", {});
