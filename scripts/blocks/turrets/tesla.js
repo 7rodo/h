@@ -105,10 +105,12 @@ const teslaLaser = extend(BasicBulletType, {
     const tscales = [0.5, 0.4, 0.3, 0.2];
     const lenscales = [1, 1.1, 1.13, 1.14];
     const length = 99;
+    const lengthA = 120
     const f = Mathf.curve(b.fin(), 0, 0.1);
     const baseLen = length * f;
+    const tmpColor = new Color();
 
-    Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+    /*Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(s = 0; s < 3; s++){
       Draw.color(colors[s]);
       for(i = 0; i < tscales.length; i++){
@@ -116,6 +118,16 @@ const teslaLaser = extend(BasicBulletType, {
         Lines.lineAngle(b.x, b.y, b.rot(), baseLen * lenscales[i]);
       }
     }
+    Draw.reset();*/
+    
+    for(var s = 0; s < 4; s++){
+      Draw.color(tmpColor.set(colors[s]).mul(1.0 + Mathf.absin(Time.time(), 1.2, 0.4)));
+      for(var i = 0; i < 4; i++){
+        Tmp.v1.trns(b.rot() + 180.0, (lenscales[i] - 0.8) * 55.0);
+        Lines.stroke((9 + Mathf.absin(Time.time(), 1.7, 3.1)) * b.fout() * strokes[s] * tscales[i]);
+        Lines.lineAngle(b.x + Tmp.v1.x, b.y + Tmp.v1.y, b.rot(), (Math.min(this.lengthA, b.getData()[0]) * lenscales[i]) * 1.12, CapStyle.none);
+      }		
+    };
     Draw.reset();
   }
 });
