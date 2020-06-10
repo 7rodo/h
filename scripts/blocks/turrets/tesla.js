@@ -102,8 +102,8 @@ const teslaLaser = extend(BasicBulletType, {
   
   draw(b){
     if(b.getData()[0] == null){
-      return;		
-    }
+      return		
+    };
     
     const f = Mathf.curve(b.fin(), 0, 0.2);
     const baseLen = length * f;
