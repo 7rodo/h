@@ -42,9 +42,7 @@ const teslaFrag = extend(BasicBulletType, {
                      
   draw(b){
   }
-
 });
-*/
 
 teslaFrag.lifetime = 1;
 teslaFrag.pierce = true;
