@@ -30,11 +30,12 @@ const teslaHit = newEffect(21, e => {
   Fill.circle(e.x, e.y, e.fin() * 4);
 });
 
-const colors1 = [color1, color2, Color.valueOf("ffffff")];
+/*const colors1 = [color1, color2, Color.valueOf("ffffff")];
 const tscales1 = [0.3, 0.2, 0.15, 0.1];
 const lenscales1 = [1, 1.1, 1.13, 1.14];
 const length1 = 9;
-
+*/
+/*
 const teslaFrag = extend(BasicBulletType, {
   update(b){
     Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length1);
@@ -54,7 +55,8 @@ const teslaFrag = extend(BasicBulletType, {
     Draw.reset();
   }
 });
-
+*/
+/*
 teslaFrag.speed = 1.1;
 teslaFrag.lifetime = 9;
 teslaFrag.pierce = true;
@@ -68,7 +70,7 @@ teslaFrag.shootEffect = Fx.none;
 teslaFrag.smokeEffect = Fx.none;
 teslaFrag.despawnEffect = Fx.none;
 teslaFrag.hitEffect = Fx.none;
-
+*/
 const colors = [color1, color2, Color.valueOf("ffffff")];
 const tscales = [0.5, 0.4, 0.3, 0.2];
 const lenscales = [1, 1.1, 1.13, 1.14];
@@ -99,11 +101,12 @@ const teslaLaser = extend(BasicBulletType, {
   },
   
   draw(b){
-    f = Mathf.curve(b.fin(), 0, 0.2);
-    baseLen = length * f;
     if(b.getData()[0] == null){
       return;		
     }
+    
+    const f = Mathf.curve(b.fin(), 0, 0.2);
+    const baseLen = length * f;
 
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(s = 0; s < 3; s++){
