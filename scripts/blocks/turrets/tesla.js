@@ -50,7 +50,7 @@ const teslaFrag = extend(BasicBulletType, {
     }
     Draw.reset();
   }*/
-  Lighting.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
+  Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
   },  
                      
   update(b){
