@@ -101,6 +101,9 @@ const teslaLaser = extend(BasicBulletType, {
   draw(b){
     f = Mathf.curve(b.fin(), 0, 0.2);
     baseLen = length * f;
+    if(b.getData()[0] == null){
+      return;		
+    }
 
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(s = 0; s < 3; s++){
