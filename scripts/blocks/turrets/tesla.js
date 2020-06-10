@@ -94,6 +94,7 @@ const teslaLaser = extend(BasicBulletType, {
       }
     }
     Draw.reset();
+  }
 });
 
 teslaLaser.speed = 0.9;
