@@ -37,20 +37,7 @@ const length1 = 9;
 
 const teslaFrag = extend(BasicBulletType, {
   draw(b){
-    /*const f1 = Mathf.curve(b.fin(), 0, 0.2);
-    const baseLen1 = length1 * f1;
-
-    Lines.lineAngle(b.x, b.y, b.rot(), baseLen1);
-      for(s = 0; s < 3; s++){
-      Draw.color(colors1[s])
-      for(i = 0; i < tscales1.length1; i++){
-        Lines.stroke(4 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales1[i]);
-        Lines.lineAngle(b.x, b.y, b.rot(), baseLen1 * lenscales1[i]);
-      }
-    }
-    Draw.reset();
-  }*/
-  Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
+    Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
   },  
                      
   update(b){
