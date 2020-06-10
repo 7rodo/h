@@ -14,11 +14,17 @@ const laserShoot = newEffect(21, e => {
   
   for(var h = 0; h < 2; h++){
     var hh = Mathf.signs[h];
-    Drawf.tri(e.x, e.y, 4 * e.fout(), 29, e.rotation + 90 * hh);
+    Drawf.tri(e.x, e.y, 4 * e.fout(), 29, e.rotation + 78 * hh);
   }
 });
 
 const teslaShoot = newEffect(21, e => {
+  Draw.color(color1);
+
+  Fill.circle(e.x, e.y, e.fin() * 4);
+});
+
+const teslaHit = newEffect(21, e => {
   Draw.color(color1);
 
   Fill.circle(e.x, e.y, e.fin() * 4);
@@ -31,7 +37,7 @@ const length1 = 9;
 
 const teslaFrag = extend(BasicBulletType, {
   update(b){
-    Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length1);
+    Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length1);
   },  
   draw(b){
     f1 = Mathf.curve(b.fin(), 0, 0.2);
@@ -113,7 +119,7 @@ teslaLaser.damage = 2;
 teslaLaser.shootEffect = laserShoot;
 teslaLaser.smokeEffect = Fx.none;
 teslaLaser.despawnEffect = Fx.none;
-teslaLaser.hitEffect = Fx.none;
+teslaLaser.hitEffect = teslaHit;
 teslaLaser.lightining = 4;
 teslaLaser.lightingLength = 6;
 /*
