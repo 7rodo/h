@@ -80,7 +80,7 @@ const teslaLaser = extend(BasicBulletType, {
       //Effects.shake(1.2, 1.2, b.x, b.y);			
       if(b.timer.get(1, 5) && b.getData() != null){			
         b.getData()[1] = true;			
-        Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), Math.min(lrngth, b.getData()[0]), true);			
+        Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), Math.min(length, b.getData()[0]), true);			
         //b.getData()[1] = true;		
       }
   },  
