@@ -39,6 +39,7 @@ pulseRad.speed = 5;
 pulseRad.lifetime = 360;
 pulseRad.damage = 0;
 pulseRad.pierce = true;
+pulseRad.drawSize = 420;
 pulseRad.hitSize = 420;
 pulseRad.splashDamage = 0;
 pulseRad.splashDamageRadius = 250;
