@@ -72,6 +72,19 @@ const teslaLaser = extend(BasicBulletType, {
   update(b){
     Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length);
   },  
+  
+  hit(b, hitx, hity){
+   	if(hitx != null && hity != null && b.getData() != null && b.getData()[1]){			
+      //var angle = Angles.angle(b.x, b.y, hitx, hity);			
+      Effects.effect(this.hitEffect, hitx, hity, b.rot());			
+      len = Mathf.dst(b.x, b.y, hitx, hity);			
+      b.getData()[0] = len;			
+      b.getData()[1] = false;			
+      //b.setData(len);	
+      //Stolen from AdvanceContent's Eclipse hit(b, hitx, hity)
+    }
+  },
+  
   draw(b){
     f = Mathf.curve(b.fin(), 0, 0.2);
     baseLen = length * f;
