@@ -31,9 +31,9 @@ const teslaHit = newEffect(21, e => {
 });
 
 const colors1 = [color1, color2, Color.valueOf("ffffff")];
-const tscales1 = [0.3, 0.2, 0.15, 0.1];
-const lenscales1 = [1, 1.1, 1.13, 1.14];
-const length1 = 9;
+//const tscales1 = [0.3, 0.2, 0.15, 0.1];
+//const lenscales1 = [1, 1.1, 1.13, 1.14];
+const length1 = 3;
 
 const teslaFrag = extend(BasicBulletType, {
   draw(b){
