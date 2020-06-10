@@ -31,13 +31,25 @@ const teslaHit = newEffect(21, e => {
 });
 
 const colors1 = [color1, color2, Color.valueOf("ffffff")];
-//const tscales1 = [0.3, 0.2, 0.15, 0.1];
-//const lenscales1 = [1, 1.1, 1.13, 1.14];
+const tscales1 = [0.3, 0.2, 0.15, 0.1];
+const lenscales1 = [1, 1.1, 1.13, 1.14];
 const length1 = 9;
 
 const teslaFrag = extend(BasicBulletType, {
   draw(b){
-    Lightning.create(b.getTeam(), colors1, 1, b.x, b.y, b.rot(), length1)
+    const f1 = Mathf.curve(b.fin(), 0, 0.2);
+    const baseLen1 = length1 * f1;
+
+    Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
+      for(s = 0; s < 3; s++){
+      Draw.color(colors[s])
+      for(i = 0; i < tscales1.length1; i++){
+        Lines.stroke(4 * b.fout() * (s == 0 ? 1.5 : s == 1 ? 1 : 0.3) * tscales1[i]);
+        Lines.lineAngle(b.x, b.y, b.rot(), baseLen1 * lenscales1[i]);
+      }
+    }
+    Draw.reset();
+  }
   },  
                      
   update(b){
@@ -63,7 +75,7 @@ const length = 99;
 
 const teslaLaser = extend(BasicBulletType, {
   update(b){
-    Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length, true);			
+    Damage.collideLine(b, b.getTeam(), Fx.none, b.x, b.y, b.rot(), length, true);
   },  
   
   draw(b){
