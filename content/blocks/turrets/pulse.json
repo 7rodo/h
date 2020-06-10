@@ -8,7 +8,8 @@
   "shootCone": 360,
   "category": "turret",
   "requirements": [
-    {"item": "titanium", "amount": 50},
-    {"item": "silicon", "amount": 40}
+    {"item": "copper", "amount": 120},
+    {"item": "titanium", "amount": 100},
+    {"item": "silicon", "amount": 80}
   ]
 }
