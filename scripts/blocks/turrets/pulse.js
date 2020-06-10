@@ -69,7 +69,7 @@ const pulse = extendContent(PowerTurret, "pulse", {
       Draw.rect(this.spinRegion, tile.drawx(), tile.drawy(), Time.time() * 0.4);
     } else {
         Draw.rect(this.spinRegion, tile.drawx(), tile.drawy());
-      }
+    }
   },
   
   update(tile){
