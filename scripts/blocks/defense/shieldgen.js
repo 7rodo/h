@@ -21,7 +21,7 @@ const shieldGen = extendContent(ForceProjector, "shieldgen", {
       Draw.blend(Blending.additive);
       Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
       Draw.blend();
-      Draw.reset();*/
-    }
+      Draw.reset();
+    }*/
   }
 });
