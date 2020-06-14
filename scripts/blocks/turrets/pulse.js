@@ -72,6 +72,9 @@ const pulseDis = extend(BasicBulletType, {
   }
 });
 
+pulseDis.damage = 0;
+pulseDis.knockback = 0;
+
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
     this.region = Core.atlas.find(this.name);
