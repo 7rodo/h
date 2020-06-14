@@ -33,12 +33,7 @@ const pulseCircle = newEffect(140, e => {
 
 const pulseRad = extend(BasicBulletType, {
   draw(b){
-    
   },
-  
-  update(b){
-    Damage.damage(b.getTeam(), b.x, b.y, 180, 0);
-  }
 });
 
 pulseRad.speed = 5;
@@ -49,13 +44,33 @@ pulseRad.drawSize = 40;
 pulseRad.hitSize = 4;
 //pulseRad.splashDamage = 0;
 //pulseRad.splashDamageRadius = 250;
-pulseRad.shootEffect = pulseCircle;
+pulseRad.shootEffect = Fx.none;
 pulseRad.hitEffect = pulseHit;
 pulseRad.despawnEffect = Fx.none;
 pulseRad.smokeEffect = Fx.none;
 pulseRad.status = disabled;
 pulseRad.statusDuration = 360;
 
+const pulseDis = extend(BasicBulletType, {
+  draw(b){
+    
+  },
+  
+  update(b){
+    const hh = false
+    
+    Units.nearbyEnemies(b.getTeam(), b.x - 180, b.y - 180, x2 * 180, y2 * 180, cons(unit => {
+      if(unit.withinDst(b.x, b.y, 180)){ 
+        if(!unit.isDead() && unit instanceof HealthTrait){
+          Calls.createBullet(pulseRad, b.getTeam(), unit.x, unit.y, 0);
+          if(!hh){
+            hh = true;
+          }
+        }
+      }
+    }));
+  }
+}
 
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
@@ -92,4 +107,5 @@ const pulse = extendContent(PowerTurret, "pulse", {
   }
 });
 
-pulse.shootType = pulseRad;
+pulse.shootType = pulseDis;
+pulse.shootEffect = pulseCircle
