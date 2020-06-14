@@ -28,7 +28,7 @@ const pulseCircle = newEffect(140, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x, e.y, e.fout() * 200);
+  Lines.circle(e.x, e.y, e.fin() * 200);
 });
 
 const pulseRad = extend(BasicBulletType, {
