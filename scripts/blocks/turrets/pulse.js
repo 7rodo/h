@@ -49,7 +49,7 @@ pulseRad.hitEffect = pulseHit;
 pulseRad.despawnEffect = Fx.none;
 pulseRad.smokeEffect = Fx.none;
 pulseRad.status = disabled;
-pulseRad.statusDuration = 360;
+pulseRad.statusDuration = 240;
 
 const pulseDis = extend(BasicBulletType, {
   draw(b){
