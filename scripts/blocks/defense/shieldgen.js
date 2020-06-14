@@ -16,12 +16,12 @@ const shieldGen = extendContent(ForceProjector, "shieldgen", {
     
     Draw.rect(this.region, tile.drawx(), tile.drawy());
     
-    if(power > 0.001){
+    /*if(power > 0.001){
       Draw.alpha(0.4);
       Draw.blend(Blending.additive);
       Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
       Draw.blend();
-      Draw.reset();
+      Draw.reset();*/
     }
   }
 });
