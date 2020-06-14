@@ -12,7 +12,7 @@ const disabled = extendContent(StatusEffect, "disabled", {
 
 disabled.damageMultiplier = 0;
 disabled.armorMultiplier = 0.8;
-disabled.speedMultiplier = 0.00001;
+disabled.speedMultiplier = 0.00000001;
 disabled.damage = 0;
 disabled.effect = Fx.none;
 disabled.color = primeColor;
@@ -24,7 +24,7 @@ const pulseHit = newEffect(15, e => {
   Lines.square(e.x, e.y, 4 + e.fin() * 3, 45);
 });
 
-const pulseCircle = newEffect(140, e => {
+const pulseCircle = newEffect(80, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
