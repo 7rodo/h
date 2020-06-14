@@ -20,31 +20,37 @@ disabled.color = primeColor;
 const pulseHit = newEffect(15, e => {
   Draw.color(primeColor, secColor, e.fin());
   
-  Fill.square(e.x, e.y, 4 + e.fin() * 3)
+  Lines.stroke(3);
+  Lines.square(e.x, e.y, 4 + e.fin() * 3, 45);
 });
 
-const pulseCircle = newEffect(360, e => {
+const pulseCircle = newEffect(140, e => {
   Draw.color(primeColor);
   
   Lines.stroke(e.fout() * 5);
-  Lines.circle(e.x, e.y, e.fin() * 170);
+  Lines.circle(e.x, e.y, e.fout() * 200);
 });
 
 const pulseRad = extend(BasicBulletType, {
   draw(b){
+    
+  },
+  
+  update(b){
+    Damage.radius(b.getTeam(), b.x, b.y, 180, 0);
   }
 });
 
 pulseRad.speed = 5;
-pulseRad.lifetime = 360;
+pulseRad.lifetime = 10;
 pulseRad.damage = 0;
 pulseRad.pierce = true;
-pulseRad.drawSize = 420;
-pulseRad.hitSize = 420;
-pulseRad.splashDamage = 0;
-pulseRad.splashDamageRadius = 250;
+pulseRad.drawSize = 40;
+pulseRad.hitSize = 4;
+//pulseRad.splashDamage = 0;
+//pulseRad.splashDamageRadius = 250;
 pulseRad.shootEffect = pulseCircle;
-pulseRad.hitEffect = Fx.none;
+pulseRad.hitEffect = pulseHit;
 pulseRad.despawnEffect = Fx.none;
 pulseRad.smokeEffect = Fx.none;
 pulseRad.status = disabled;
