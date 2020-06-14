@@ -37,6 +37,9 @@ const length1 = 3;
 
 const teslaFrag = extend(BasicBulletType, {
   init(b){
+    if(!b){
+      return;
+    }
     Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
   },  
                      
