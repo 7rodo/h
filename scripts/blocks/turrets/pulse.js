@@ -59,7 +59,7 @@ const pulseDis = extend(BasicBulletType, {
   update(b){
     const hh = false
     
-    Units.nearbyEnemies(b.getTeam(), b.x - 180, b.y - 180, x2 * 180, y2 * 180, cons(unit => {
+    Units.nearbyEnemies(b.getTeam(), b.x - 180, b.y - 180, b.x * 180, b.y * 180, cons(unit => {
       if(unit.withinDst(b.x, b.y, 180)){ 
         if(!unit.isDead() && unit instanceof HealthTrait){
           Calls.createBullet(pulseRad, b.getTeam(), unit.x, unit.y, 0);
