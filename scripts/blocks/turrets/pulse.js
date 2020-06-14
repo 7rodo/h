@@ -70,7 +70,7 @@ const pulseDis = extend(BasicBulletType, {
       }
     }));
   }
-}
+});
 
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
@@ -108,4 +108,4 @@ const pulse = extendContent(PowerTurret, "pulse", {
 });
 
 pulse.shootType = pulseDis;
-pulse.shootEffect = pulseCircle
+pulse.shootEffect = pulseCircle;
