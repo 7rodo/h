@@ -36,7 +36,7 @@ const pulseRad = extend(BasicBulletType, {
   },
 });
 
-pulseRad.speed = 5;
+pulseRad.speed = 1;
 pulseRad.lifetime = 10;
 pulseRad.damage = 0;
 pulseRad.pierce = false;
