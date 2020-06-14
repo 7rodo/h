@@ -37,7 +37,7 @@ const pulseRad = extend(BasicBulletType, {
   },
   
   update(b){
-    Damage.radius(b.getTeam(), b.x, b.y, 180, 0);
+    Damage.damage(b.getTeam(), b.x, b.y, 180, 0);
   }
 });
 
