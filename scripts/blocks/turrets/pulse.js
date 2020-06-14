@@ -12,7 +12,7 @@ const disabled = extendContent(StatusEffect, "disabled", {
 
 disabled.damageMultiplier = 0;
 disabled.armorMultiplier = 0.8;
-disabled.speedMultiplier = 0;
+disabled.speedMultiplier = 0.00001;
 disabled.damage = 0;
 disabled.effect = Fx.none;
 disabled.color = primeColor;
