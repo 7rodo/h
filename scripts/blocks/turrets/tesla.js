@@ -36,11 +36,11 @@ const colors1 = [color1, color2, Color.valueOf("ffffff")];
 const length1 = 3;
 
 const teslaFrag = extend(BasicBulletType, {
-  draw(b){
+  init(b){
     Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), length1);
   },  
                      
-  update(b){
+  draw(b){
   }
 });
 
