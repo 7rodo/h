@@ -1,0 +1,26 @@
+{
+  "health": 80,
+  "size": 2,
+  "outputItem": {"item": "dirium", "amount": 1},
+  "hasPower": true,
+  "hasItems": true,
+  "consumes": {
+    "power": 0.8,
+    "items": {
+      "items": [
+        {"item": "coal", "amount": 2},
+        {"item": "titanium", "amount": 4},
+        {"item": "steelh", "amount": 3}
+      ]
+    }
+  }
+  "requirements":[
+      {"item": "lead", "amount": 110},
+      {"item": "titanium","amount": 70},
+      {"item": "silicon", "amount": 50}
+    ]
+  "category": "crafting",
+  "research": "phase-weaver",
+  "idleSound": "respawning",
+  "idleSoundVolume": 0.3
+}
