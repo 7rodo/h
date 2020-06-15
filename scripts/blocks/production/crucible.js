@@ -22,9 +22,9 @@ const cru = extendContent(GenericSmelter, "crucible", {
     
     //draw glowing center
     if(entity.warmup > 0 && this.flameColor.a > 0.001){
-      float g = 0.3;
-      float r = 0.06;
-      float cr = Mathf.random(0.1);
+      g = 0.3;
+      r = 0.06;
+      cr = Mathf.random(0.1);
       
       Draw.alpha(((1 - g) + Mathf.absin(Time.time(), 8, g) + Mathf.random(r) - r) * entity.warmup);
 
