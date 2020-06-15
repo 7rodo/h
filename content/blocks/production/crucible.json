@@ -17,7 +17,7 @@
   "requirements": [
       {"item": "lead", "amount": 110},
       {"item": "titanium","amount": 70},
-      {"item": "steel", "amount": 50}
+      {"item": "steelh", "amount": 50}
   ],
   "category": "crafting",
   "research": "alloy-smelter",
