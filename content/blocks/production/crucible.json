@@ -1,6 +1,6 @@
 {
-  "health": 80,
-  "size": 2,
+  "health": 60,
+  "size": 3,
   "outputItem": {"item": "dirium", "amount": 1},
   "hasPower": true,
   "hasItems": true,
@@ -17,7 +17,7 @@
   "requirements": [
       {"item": "lead", "amount": 110},
       {"item": "titanium","amount": 70},
-      {"item": "silicon", "amount": 50}
+      {"item": "steel", "amount": 50}
   ],
   "category": "crafting",
   "research": "alloy-smelter",
