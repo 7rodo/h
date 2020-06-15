@@ -75,7 +75,7 @@ const teslaLaser = extend(BasicBulletType, {
       return;
     }
     for(var h = 0; h <= 2; h++){ 
-      Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), 12);
+      Lightning.create(b.getTeam(), color1, this.damage, b.x, b.y, b.rot(), 9);
     }
   },  
   
