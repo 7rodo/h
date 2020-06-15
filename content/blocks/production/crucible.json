@@ -20,7 +20,7 @@
       {"item": "silicon", "amount": 50}
   ],
   "category": "crafting",
-  "research": "phase-weaver",
+  "research": "alloy-smelter",
   "idleSound": "respawning",
   "idleSoundVolume": 0.3
 }
