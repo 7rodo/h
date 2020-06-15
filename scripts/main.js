@@ -1,6 +1,9 @@
 //This is the main.js, also known as main.js, it's function is the same as main.js
 
-//Blocka
+//Blocks
+  //Production
+    require("blocks/production/crucible");
+
   //Defense
     require("blocks/defense/shieldgen");
 
