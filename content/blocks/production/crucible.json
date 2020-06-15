@@ -13,12 +13,12 @@
         {"item": "steelh", "amount": 3}
       ]
     }
-  }
-  "requirements":[
+  },
+  "requirements": [
       {"item": "lead", "amount": 110},
       {"item": "titanium","amount": 70},
       {"item": "silicon", "amount": 50}
-    ]
+  ],
   "category": "crafting",
   "research": "phase-weaver",
   "idleSound": "respawning",
