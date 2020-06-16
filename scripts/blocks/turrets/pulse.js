@@ -80,13 +80,13 @@ const pulse = extendContent(PowerTurret, "pulse", {
     this.region = Core.atlas.find(this.name);
     this.heatRegion = Core.atlas.find(this.name + "-heat");
     this.baseRegion = Core.atlas.find(this.name + "-base");
-    this.spinRegion = Core.atlas.find(this.name + "-spin");
+    this.lightRegion = Core.atlas.find(this.name + "-light");
   },
   
   generateIcons(){
     return [
-      Core.atlas.find(this.name + "-base"),
-      Core.atlas.find(this.name + "-spin"),
+      Core.atlas.find("block-" + this.size),
+      Core.atlas.find(this.name + "-light"),
       Core.atlas.find(this.name)
     ]
   },
@@ -94,10 +94,9 @@ const pulse = extendContent(PowerTurret, "pulse", {
   draw(tile){
     Draw.rect(this.baseRegion, tile.drawx(), tile.drawy());
     if(tile.entity.power.status > 0.001){
-      Draw.rect(this.spinRegion, tile.drawx(), tile.drawy(), Time.time() * 0.4);
-    } else {
-        Draw.rect(this.spinRegion, tile.drawx(), tile.drawy(), tile.rotation);
-    }
+      //Some magic soon, too lazy to do it today
+      Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
+    } 
   },
   
   update(tile){
