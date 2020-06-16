@@ -96,7 +96,7 @@ const pulse = extendContent(PowerTurret, "pulse", {
     if(tile.entity.power.status > 0.001){
       Draw.rect(this.spinRegion, tile.drawx(), tile.drawy(), Time.time() * 0.4);
     } else {
-        Draw.rect(this.spinRegion, tile.drawx(), tile.drawy());
+        Draw.rect(this.spinRegion, tile.drawx(), tile.drawy(), tile.rotation);
     }
   },
   
