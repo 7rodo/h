@@ -25,4 +25,4 @@ const lava = extendContent(Liquid, "lava", {});
   lava.viscosity = 0.8;
   lava.color = primeColor;
   lava.lightColor = Color.valueOf("f27356");
-  lava.effect = Fx.burning;
+  lava.effect = StatusEffects.burning;
