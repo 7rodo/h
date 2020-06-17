@@ -2,8 +2,8 @@ const laser = extendContent(PowerTurret, "laser", {
   load(){
     this.super$load();
     
-    this.laserRegion = Core.atlas.find("laser");
-    this.laserEndRegion = Core.atlas.find("laser-end");
+    this.laserRegion = Core.atlas.find("laserh");
+    this.laserEndRegion = Core.atlas.find("laserh-end");
     this.layer2 = Layer.power;
   },
   
@@ -21,15 +21,12 @@ const laser = extendContent(PowerTurret, "laser", {
         var ang = entity.angleTo(entity.target);
         var len = 5;
         
-        Draw.alpha(0.666);
         Draw.color(Color.valueOf("d3ebff"));
-        Draw.blend(Blending.additive);
         Drawf.laser(this.laserRegion, this.laserEndRegion, 
           tile.drawx() + Angles.trnsx(ang, len),
           tile.drawy() + Angles.trnsy(ang, len),
           entity.target.getX(), entity.target.getY(), entity.heat * 0.8 * entity.efficiency());
-        Draw.blend();
-        Draw.reset();
+        Draw.color();
       }
     }
   },
