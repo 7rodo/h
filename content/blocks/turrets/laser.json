@@ -12,11 +12,12 @@
     "knockback": 0,
     "recoil": 0.2,
     "innaccuracy": 0,
-    "hitEffect: "none",
+    "hitEffect": "none",
     "shootEffect": "none",
-    "smokeEffect": "none".
-    "despawnEffect": "none"
-  }
+    "smokeEffect": "none",
+    "despawnEffect": "none",
+    "bulletSprite": "clear"
+  },
   "targetAir": false,
   "powerUse": 1.5,
   "shootSound": "none",
