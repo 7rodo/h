@@ -8,6 +8,8 @@ const laser = extendContent(PowerTurret, "laser", {
   },
   
   bullet(tile, type){
+    var entity = tile.ent();
+    
     Bullet.create(type, tile.entity, tile.getTeam(), entity.target.getX(), entity.target.getY(), 0, 1, 1);
   },
   
