@@ -16,8 +16,8 @@ const laser = extendContent(PowerTurret, "laser", {
   drawLayer2(tile){
     var entity = tile.ent();
     
-    if (entity.cons.valid() && entity.target != null){
-      if (Angles.angleDist(entity.angleTo(entity.target), entity.rotation) < this.shootCone){
+    if(entity.cons.valid() && entity.target != null){
+      if(Angles.angleDist(entity.angleTo(entity.target), entity.rotation) < this.shootCone){
         var ang = entity.angleTo(entity.target);
         var len = 5;
         
