@@ -21,11 +21,11 @@ const laser = extendContent(PowerTurret, "laser", {
         var ang = entity.angleTo(entity.target);
         var len = 5;
         
-        Draw.color(Color.valueOf("3ebff"));
+        Draw.color(Color.valueOf("d3ebff"), Color.valueOf("fafafa"), 0.9);
         Drawf.laser(this.laserRegion, this.laserEndRegion, 
           tile.drawx() + Angles.trnsx(ang, len),
           tile.drawy() + Angles.trnsy(ang, len),
-          entity.target.getX(), entity.target.getY(), entity.heat * 0.8 * entity.efficiency());
+          entity.target.getX(), entity.target.getY(), entity.heat * 0.77 * entity.efficiency());
         Draw.color();
       }
     }
