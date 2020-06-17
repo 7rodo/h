@@ -36,12 +36,14 @@ const pulseRad = extend(BasicBulletType, {
   },
 });
 
-pulseRad.speed = 1;
+pulseRad.speed = 0.001;
 pulseRad.lifetime = 1;
 pulseRad.damage = 0;
+pulseRad.knockback = 0;
+pulseRad.recoil = 0;
 pulseRad.pierce = false;
-pulseRad.drawSize = 40;
-pulseRad.hitSize = 4;
+pulseRad.drawSize = 0;
+pulseRad.hitSize = 1;
 //pulseRad.splashDamage = 0;
 //pulseRad.splashDamageRadius = 250;
 pulseRad.shootEffect = Fx.none;
@@ -72,6 +74,8 @@ const pulseDis = extend(BasicBulletType, {
   }
 });
 
+pulseRad.hitSize = 1;
+pulseRad.drawSize = 0;
 pulseDis.damage = 0;
 pulseDis.knockback = 0;
 
