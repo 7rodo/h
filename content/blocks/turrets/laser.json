@@ -1,0 +1,31 @@
+{
+  "health": 660,
+  "reload": 20,
+  "size": 2,
+  "range": 105,
+  "shootType": {
+    "speed": 0.001,
+    "damage": 4,
+    "lifetime": 1,
+    "hitSize": 1,
+    "drawSize": 0,
+    "knockback": 0,
+    "recoil": 0.2,
+    "innaccuracy": 0,
+    "hitEffect: "none",
+    "shootEffect": "none",
+    "smokeEffect": "none".
+    "despawnEffect": "none"
+  }
+  "targetAir": false,
+  "powerUse": 1.5,
+  "shootSound": "none",
+  "activeSound": "laser",
+  "shootCone": 0.6,
+  "category": "turret",
+  "requirements": [
+    {"item": "lead", "amount": 55},
+    {"item": "titanium", "amount": 35},
+    {"item": "dirium", "amount": 30}
+  ]
+}
