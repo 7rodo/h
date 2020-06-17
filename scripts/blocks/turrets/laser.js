@@ -2,8 +2,8 @@ const laser = extendContent(PowerTurret, "laser", {
   load(){
     this.super$load();
     
-    this.laserRegion = Core.atlas.find("laserh");
-    this.laserEndRegion = Core.atlas.find("laserh-end");
+    this.laserRegion = Core.atlas.find("h-laserh");
+    this.laserEndRegion = Core.atlas.find("h-laserh-end");
     this.layer2 = Layer.power;
   },
   
