@@ -19,13 +19,13 @@ const laser = extendContent(PowerTurret, "laser", {
     if (entity.cons.valid() && entity.target != null){
       if (Angles.angleDist(entity.angleTo(entity.target), entity.rotation) < this.shootCone){
         var ang = entity.angleTo(entity.target);
-        var len = 5;
+        var len = 13;
         
         Draw.color(Color.valueOf("d3ebff"));
         Drawf.laser(this.laserRegion, this.laserEndRegion, 
           tile.drawx() + Angles.trnsx(ang, len),
           tile.drawy() + Angles.trnsy(ang, len),
-          entity.target.getX(), entity.target.getY(), entity.heat * 0.4 * entity.efficiency());
+          entity.target.getX(), entity.target.getY(), entity.heat * 0.9 * entity.efficiency());
         Draw.color();
       }
     }
