@@ -22,10 +22,12 @@ const laser = extendContent(PowerTurret, "laser", {
         var len = 5;
         
         Draw.color(Color.valueOf("d3ebff"));
+        Draw.blend(Blending.additive);
         Drawf.laser(this.laserRegion, this.laserEndRegion, 
           tile.drawx() + Angles.trnsx(ang, len),
           tile.drawy() + Angles.trnsy(ang, len),
           entity.target.getX(), entity.target.getY(), entity.heat * 0.9 * entity.efficiency());
+        Draw.blend();
         Draw.color();
       }
     }
