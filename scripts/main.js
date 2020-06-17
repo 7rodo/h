@@ -8,6 +8,7 @@
     require("blocks/defense/shieldgen");
 
   //Turrets
+    require("blocks/turrets/laser");
     require("blocks/turrets/tesla");
     require("blocks/turrets/pulse");
 
