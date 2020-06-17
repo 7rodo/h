@@ -32,6 +32,10 @@ const laser = extendContent(PowerTurret, "laser", {
   shouldActiveSound(tile){
     var entity = tile.ent();
     
-    
+    if(tile != null && entity.target != null && entity.cons.valid()){
+      return Angles.angleDist(entity.angleTo(entity.target), entity.rotation) < this.shootCone;
+    } else {
+        return false;
+      }
   }
 })
