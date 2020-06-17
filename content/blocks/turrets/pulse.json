@@ -4,7 +4,7 @@
   "size": 2,
   "range": 180,
   "powerUse": 3.86,
-  "shootSound": "laser",
+  "shootSound": "ping",
   "shootCone": 360,
   "category": "turret",
   "requirements": [
