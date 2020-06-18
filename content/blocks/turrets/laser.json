@@ -21,7 +21,7 @@
   "targetAir": false,
   "powerUse": 1.5,
   "shootSound": "none",
-  "activeSound": "laser",
+  "activeSound": "laserh",
   "shootCone": 0.6,
   "category": "turret",
   "requirements": [
