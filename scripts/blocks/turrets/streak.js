@@ -13,7 +13,7 @@ const streakLaser = extend(BssicBulletType, {
   },
   
   draw(b){
-    var baseLen = (length) * b.fout();
+    var baseLen = length * b.fout();
   
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(var s = 0; s < colors.length; s++){
