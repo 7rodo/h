@@ -28,6 +28,21 @@ const streakLaser = extend(BssicBulletType, {
   }
 });
 
+streakLaser.speed = 0.01;
+streakLaser.lifetime = 13;
+streakLaser.pierce = true;
+streakLaser.hitSize = 6;
+streakLaser.drawSize = 400;
+streakLaser.collides = true;
+streakLaser.collidesGround = true;
+streakLaser.collidesAir = true;
+streakLaser.collidesTiles = true;
+streakLaser.damage = 240;
+streakLaser.shootEffect = Fx.none;
+streakLaser.smokeEffect = Fx.none;
+streakLaser.despawnEffect = Fx.none;
+streakLaser.hitEffect = Fx.none;
+
 const streak = extendContent(LaserTurret, "streak", {});
 
 streak.shootType = streakLaser;
