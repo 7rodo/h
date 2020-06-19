@@ -1,13 +1,15 @@
 {
   "health": 2240,
-  "reload": 20,
+  "reload": 90,
   "size": 3,
-  "range": 150,
+  "range": 180,
   "targetAir": true,
-  "powerUse": 1.7,
+  "powerUse": 11,
   "shootSound": "none",
   "activeSound": "resonate",
+  "firingMoveFract": 0.3,
   "shootCone": 0.1,
+  "shootDuration": 240,
   "category": "turret",
   "requirements": [
     {"item": "copper", "amount": 250}
