@@ -15,6 +15,6 @@
     {"item": "copper", "amount": 250}
     {"item": "lead", "amount": 225},
     {"item": "graphite", "amount": 80},
-    {"item": "steel", "amount": 95}
+    {"item": "steelh", "amount": 95}
   ]
 }
