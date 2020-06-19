@@ -1,8 +1,8 @@
 const tmpColor = new Color();
-const colors = {Color.valueOf("5757c2"), Color.valueOf("6a75c4"), Color.valueOf("8ca4f5"), Color.white};
-const tscales = {1, 0.7, 0.5, 0.2};
-const strokes = {2, 1.5, 1, 0.3};
-const lenscales = {1, 1.12, 1.15, 1.17};
+const colors = [Color.valueOf("5757c2"), Color.valueOf("6a75c4"), Color.valueOf("8ca4f5"), Color.white];
+const tscales = [1, 0.7, 0.5, 0.2];
+const strokes = [2, 1.5, 1, 0.3];
+const lenscales = [1, 1.12, 1.15, 1.17];
 const length = 210;
 
 const streakLaser = extend(BssicBulletType, {
