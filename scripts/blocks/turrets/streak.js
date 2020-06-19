@@ -5,10 +5,10 @@ const strokes = [2, 1.5, 1, 0.3];
 const lenscales = [1, 1.12, 1.15, 1.17];
 const length = 210;
 
-const streakLaser = extend(BssicBulletType, {
+const streakLaser = extend(BasicBulletType, {
   update(b){
     if(b.timer.get(1, 5)){
-      Damage.collideLine(b, b.getTeam(), hitEffect, b.x, b.y, b.rot(), length, true);
+      Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length, true);
     }
   },
   
