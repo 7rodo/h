@@ -1,0 +1,18 @@
+{
+  "health": 2240,
+  "reload": 20,
+  "size": 3,
+  "range": 150,
+  "targetAir": true,
+  "powerUse": 1.7,
+  "shootSound": "none",
+  "activeSound": "resonate",
+  "shootCone": 0.1,
+  "category": "turret",
+  "requirements": [
+    {"item": "copper", "amount": 250}
+    {"item": "lead", "amount": 225},
+    {"item": "graphite", "amount": 80},
+    {"item": "steel", "amount": 95}
+  ]
+}
