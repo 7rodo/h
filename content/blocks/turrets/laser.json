@@ -5,7 +5,7 @@
   "range": 105,
   "shootType": {
     "speed": 0.001,
-    "damage": 12,
+    "damage": 14,
     "lifetime": 1,
     "hitSize": 1,
     "drawSize": 0,
@@ -26,7 +26,6 @@
   "category": "turret",
   "requirements": [
     {"item": "lead", "amount": 55},
-    {"item": "titanium", "amount": 35},
-    {"item": "dirium", "amount": 30}
+    {"item": "titanium", "amount": 35}
   ]
 }
