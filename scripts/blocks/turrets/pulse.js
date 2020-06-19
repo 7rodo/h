@@ -17,10 +17,10 @@ disabled.damage = 0;
 disabled.effect = Fx.none;
 disabled.color = primeColor;
 
-const pulseHit = newEffect(15, e => {
+const pulseHit = newEffect(20, e => {
   Draw.color(primeColor, secColor, e.fin());
   
-  Lines.stroke(3);
+  Lines.stroke(3 * e.fout());
   Lines.square(e.x, e.y, 4 + e.fin() * 3, 45);
 });
 
