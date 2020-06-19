@@ -11,6 +11,7 @@
     require("blocks/turrets/laser");
     require("blocks/turrets/tesla");
     require("blocks/turrets/pulse");
+    require("blocks/turrets/streak");
 
   //Walls
     require("blocks/walls/shieldwall");
