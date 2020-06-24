@@ -7,14 +7,14 @@
   "powerUse": 11,
   "shootSound": "none",
   "activeSound": "resonate",
-  "firingMoveFract": 0.3,
-  "shootCone": 0.1,
+  "firingMoveFract": 0.6,
+  "shootCone": 40,
   "shootDuration": 240,
   "category": "turret",
   "requirements": [
-    {"item": "copper", "amount": 250}
-    {"item": "lead", "amount": 225},
-    {"item": "graphite", "amount": 80},
-    {"item": "steelh", "amount": 95}
+    {"item": "copper", "amount": 350}
+    {"item": "lead", "amount": 325},
+    {"item": "graphite", "amount": 280},
+    {"item": "steelh", "amount": 195}
   ]
 }
