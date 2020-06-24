@@ -1,8 +1,8 @@
 const tmpColor = new Color();
 const colors = [Color.valueOf("8a63eb"), Color.valueOf("b099eb"), Color.valueOf("d2c9eb"), Color.white];
-const tscales = [1, 0.7, 0.5, 0.2];
-const strokes = [2, 1.5, 1, 0.3];
-const lenscales = [1, 1.12, 1.15, 1.17];
+const tscales = [0.8, 0.6, 0.5, 0.2];
+const strokes = [1.6, 1.3, 0.7, 0.2];
+const lenscales = [1, 1.1, 1.13, 1.15];
 const length = 210;
 
 const streakLaser = extend(BasicBulletType, {
@@ -37,7 +37,7 @@ streakLaser.collides = true;
 streakLaser.collidesGround = true;
 streakLaser.collidesAir = true;
 streakLaser.collidesTiles = true;
-streakLaser.damage = 96;
+streakLaser.damage = 86;
 streakLaser.shootEffect = Fx.none;
 streakLaser.smokeEffect = Fx.none;
 streakLaser.despawnEffect = Fx.none;
