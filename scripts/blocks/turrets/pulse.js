@@ -101,10 +101,10 @@ const pulse = extendContent(PowerTurret, "pulse", {
     //Why is the baseRegion not showing?
     Draw.rect(this.baseRegion, tile.drawx(), tile.drawy());
     
-    Draw.rect(this.rotRegion, tile.drawx(), tile.drawy(), Time.time() * 4);
+    Draw.rect(this.rotRegion, tile.drawx(), tile.drawy(), Time.time() * 6);
     Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
     if(tile.entity.power.status > 0.001){
-      Draw.alpha(Mathf.sin(1.2, 0.2));
+      Draw.alpha(Time.time() * 0.2);
       Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
       Draw.reset()
     } 
