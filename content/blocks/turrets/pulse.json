@@ -3,6 +3,7 @@
   "reload": 480,
   "size": 2,
   "range": 180,
+  "coolantMultiplier": 1,
   "powerUse": 3.86,
   "shootSound": "ping",
   "shootCone": 360,
