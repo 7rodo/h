@@ -46,3 +46,4 @@ streakLaser.hitEffect = Fx.none;
 const streak = extendContent(LaserTurret, "streak", {});
 
 streak.shootType = streakLaser;
+streak.update = true;
