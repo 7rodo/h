@@ -107,6 +107,7 @@ const pulse = extendContent(PowerTurret, "pulse", {
       Draw.blend(Blending.additive);
       Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
       Draw.blend();
+      Draw.reset();
     } 
   },
   
