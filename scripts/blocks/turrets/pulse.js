@@ -81,25 +81,32 @@ pulseDis.knockback = 0;
 
 const pulse = extendContent(PowerTurret, "pulse", {
   load(){
-    this.region = Core.atlas.find(this.name);
-    this.heatRegion = Core.atlas.find(this.name + "-heat");
-    this.baseRegion = Core.atlas.find(this.name + "-base");
+    this.region = Core.atlas.find("clear");
+    this.heatRegion = Core.atlas.find("clear");
+    this.baseRegion = Core.atlas.find(this.name);
     this.lightRegion = Core.atlas.find(this.name + "-light");
+    this.topRegion = Core.atlas.find(this.name + "-top");
+    this.rotRegiom = Core.atlas.find(this.name + "-rot");
   },
   
   generateIcons(){
     return [
-      Core.atlas.find("block-" + this.size),
-      Core.atlas.find(this.name + "-light"),
+      Core.atlas.find(this.name),
+      Core.atlas.find(this.name + "-rot"),
+      Core.atlas.find(this.name + "-top"),
       Core.atlas.find(this.name)
     ]
   },
   
   draw(tile){
     Draw.rect(this.baseRegion, tile.drawx(), tile.drawy());
+    Draw.rect(this.rotRegion, tile.drawx(), tile.drawy(), Time.time() * 0.9);
+    Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
     if(tile.entity.power.status > 0.001){
-      //Some magic soon, too lazy to do it today
+      Draw.alpha(Mathf.random(0.1, 0.6));
+      Draw.blend(Blending.additive);
       Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
+      Draw.blend();
     } 
   },
   
