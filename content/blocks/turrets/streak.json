@@ -1,10 +1,10 @@
 {
   "health": 2240,
-  "reload": 90,
+  "reload": 120,
   "size": 3,
   "range": 180,
   "targetAir": true,
-  "powerUse": 11,
+  "powerUse": 12.4,
   "shootSound": "none",
   "activeSound": "resonate",
   "firingMoveFract": 0.6,
