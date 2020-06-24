@@ -15,7 +15,7 @@
       "liquid": "water",
       "amount": 0.4
     }
-  }
+  },
   "coolantMultiplier": 0.8,
   "category": "turret",
   "requirements": [
