@@ -10,11 +10,14 @@ const streakLaser = extend(BasicBulletType, {
     if(b.timer.get(1, 5)){
       Damage.collideLine(b, b.getTeam(), this.hitEffect, b.x, b.y, b.rot(), length, true);
     }
+
+    if(Mathf.chance(0.9)){
+      Lightning.create(b.getTeam(), colors[2], Mathf.random(2, 7), b.x, b.y, Mathf.random(360), Mathf.random(10, 18));
+    }
   },
-  
   draw(b){
     var baseLen = length * b.fout();
-  
+
     Lines.lineAngle(b.x, b.y, b.rot(), baseLen);
       for(var s = 0; s < colors.length; s++){
         Draw.color(tmpColor.set(colors[s]).mul(1 + Mathf.absin(Time.time(), 1, 0.1)));
