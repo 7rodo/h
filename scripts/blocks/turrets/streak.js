@@ -46,7 +46,18 @@ streakLaser.smokeEffect = Fx.none;
 streakLaser.despawnEffect = Fx.none;
 streakLaser.hitEffect = Fx.none;
 
-const streak = extendContent(LaserTurret, "streak", {});
+const streak = extendContent(LaserTurret, "streak", {
+  load(){
+    this.super$load();
+    for(var h = 0; h < 4; h++){
+      this.purpleRegion[h] = Core.atlas.find(this.name + "-purple-" + (h + 1));
+    }
+  },
+
+  draw(){
+    this.super$draw();
+  }
+});
 
 streak.shootType = streakLaser;
 streak.update = true;
