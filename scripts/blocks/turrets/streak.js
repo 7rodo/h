@@ -46,16 +46,29 @@ streakLaser.smokeEffect = Fx.none;
 streakLaser.despawnEffect = Fx.none;
 streakLaser.hitEffect = Fx.none;
 
+const streakSwirl = newEffect(10, h => {
+  Draw.color(colors[2], colors[1], 0.6);
+  Lines.swirl(h.x, h.y, 40, 1);
+});
+
 const streak = extendContent(LaserTurret, "streak", {
   load(){
     this.super$load();
-    for(var h = 0; h < 4; h++){
-      this.purpleRegion[h] = Core.atlas.find(this.name + "-purple-" + (h + 1));
-    }
+
+    this.region = Core.atlas.find(this.name);
+    this.baseRegion = Core.atlas.find("block-2");
+    this.heatRegion = Core.atlas.find(this.name + "-heat");
   },
 
-  draw(){
-    this.super$draw();
+  draw(tile){
+    Draw.rect(this.baseRegion, tile.drawx(), tile.drawy())
+    Draw.color();
+
+    if(entity.power.status > 0.0001){
+      if(Mathf.chance(0.05)){
+        Effects.effect(streakSwirl, tile.drawx(), tile.drawy())
+      }
+    }
   }
 });
 
