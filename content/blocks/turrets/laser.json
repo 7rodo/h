@@ -6,7 +6,7 @@
   "range": 105,
   "shootType": {
     "speed": 0.001,
-    "damage": 14,
+    "damage": 21,
     "lifetime": 1,
     "hitSize": 1,
     "drawSize": 0,
