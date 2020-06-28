@@ -46,9 +46,10 @@ streakLaser.smokeEffect = Fx.none;
 streakLaser.despawnEffect = Fx.none;
 streakLaser.hitEffect = Fx.none;
 
-const streakSwirl = newEffect(10, h => {
-  Draw.color(colors[2], colors[1], 0.6);
-  Lines.swirl(h.x, h.y, 40, 1);
+const streakSquare = newEffect(18, h => {
+  Draw.alpha(0.6);
+  Draw.color(colors[3], colors[1], 0.2);
+  Lines.square(h.x, h.y, h.fout() * 16);
 });
 
 const streak = extendContent(LaserTurret, "streak", {
@@ -56,7 +57,7 @@ const streak = extendContent(LaserTurret, "streak", {
     this.super$load();
 
     this.region = Core.atlas.find(this.name);
-    this.baseRegion = Core.atlas.find("block-2");
+    this.baseRegion = Core.atlas.find("block-3");
     this.heatRegion = Core.atlas.find(this.name + "-heat");
   },
 
@@ -64,9 +65,9 @@ const streak = extendContent(LaserTurret, "streak", {
     Draw.rect(this.baseRegion, tile.drawx(), tile.drawy())
     Draw.color();
 
-    if(entity.power.status > 0.0001){
-      if(Mathf.chance(0.05)){
-        Effects.effect(streakSwirl, tile.drawx(), tile.drawy())
+    if(tile.entity.power.status > 0.0001){
+      if(Mathf.chance(0.005)){
+        Effects.effect(streakSquare, tile.drawx(), tile.drawy())
       }
     }
   }
