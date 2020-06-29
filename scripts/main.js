@@ -2,22 +2,22 @@
 
 //Blocks
   //Production
-    require("blocks/production/crucible");
+    require("crucible");
 
   //Defense
-    require("blocks/defense/shieldgen");
+    require("shieldgen");
 
   //Turrets
-    require("blocks/turrets/laser");
-    require("blocks/turrets/tesla");
-    require("blocks/turrets/pulse");
-    require("blocks/turrets/streak");
+    require("turrets/laser");
+    require("turrets/tesla");
+    require("turrets/pulse");
+    require("turrets/streak");
 
   //Walls
-    require("blocks/walls/shieldwall");
-    require("blocks/walls/dirium");
+    require("walls/shieldwall");
+    require("walls/dirium");
 
 //Resources & Materials
 
   //Liquids
-    require("liquids/lava");
+    require("lava");
