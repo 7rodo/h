@@ -27,8 +27,12 @@ const pulseHit = newEffect(20, e => {
 const pulseCircle = newEffect(80, e => {
   Draw.color(primeColor);
 
+  Draw.blend(Blending.additive);
+  Draw.alpha(0.8);;
   Lines.stroke(e.fout() * 5);
   Lines.circle(e.x, e.y, e.fin() * 200);
+  Draw.blend();
+  Draw.reset();
 });
 
 const pulseRad = extend(BasicBulletType, {
