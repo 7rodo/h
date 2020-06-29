@@ -17,6 +17,9 @@
     require("walls/shieldwall");
     require("walls/dirium");
 
+  //Effect
+    require("end");
+
 //Resources & Materials
 
   //Liquids

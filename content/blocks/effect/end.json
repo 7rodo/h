@@ -1,5 +1,6 @@
 {
   "size": 2,
+  "solid": true,
   "hasPower": true,
   "category": "effect",
   "consumes": {
@@ -7,8 +8,8 @@
   },
   "update": true,
   "configurable": true,
-  "requirements:": [
-    "lead/75",
-    "silicon/50"
+  "requirements": [
+    {"item": "lead", "amount": 75},
+    {"item": "silicon", "amount": 50}
   ]
 }

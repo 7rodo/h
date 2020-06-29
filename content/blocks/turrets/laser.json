@@ -12,7 +12,7 @@
     "drawSize": 0,
     "knockback": 0,
     "recoil": 0.2,
-    "innaccuracy": 0,
+    "inaccuracy": 0,
     "hitEffect": "none",
     "shootEffect": "none",
     "smokeEffect": "none",
