@@ -4,8 +4,9 @@
   //Production
     require("crucible");
 
-  //Defense
+  //Effect
     require("shieldgen");
+    require("end");
 
   //Turrets
     require("turrets/laser");
@@ -16,9 +17,6 @@
   //Walls
     require("walls/shieldwall");
     require("walls/dirium");
-
-  //Effect
-    require("end");
 
 //Resources & Materials
 
