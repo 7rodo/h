@@ -4,7 +4,7 @@ const secColor = Color.valueOf("9fcdff");
 const disabled = extendContent(StatusEffect, "disabled", {
   update(unit, time){
     this.super$update(unit, time);
-    
+
     unit.getTimer().get(unit.getShootTimer(true), 1);
     unit.getTimer().get(unit.getShootTimer(false), 1);
   }
@@ -19,14 +19,14 @@ disabled.color = primeColor;
 
 const pulseHit = newEffect(20, e => {
   Draw.color(primeColor, secColor, e.fin());
-  
+
   Lines.stroke(3 * e.fout());
   Lines.square(e.x, e.y, 4 + e.fin() * 3, 45);
 });
 
 const pulseCircle = newEffect(80, e => {
   Draw.color(primeColor);
-  
+
   Lines.stroke(e.fout() * 5);
   Lines.circle(e.x, e.y, e.fin() * 200);
 });
@@ -55,14 +55,14 @@ pulseRad.statusDuration = 190;
 
 const pulseDis = extend(BasicBulletType, {
   draw(b){
-    
+
   },
-  
+
   update(b){
     const hh = false
-    
+
     Units.nearbyEnemies(b.getTeam(), b.x - 180, b.y - 180, b.x * 180, b.y * 180, cons(unit => {
-      if(unit.withinDst(b.x, b.y, 180)){ 
+      if(unit.withinDst(b.x, b.y, 180)){
         if(!unit.isDead() && unit instanceof HealthTrait){
           Calls.createBullet(pulseRad, b.getTeam(), unit.x, unit.y, 0, 1, 1);
           if(!hh){
@@ -83,24 +83,22 @@ const pulse = extendContent(PowerTurret, "pulse", {
   load(){
     this.region = Core.atlas.find("clear");
     this.heatRegion = Core.atlas.find("clear");
-    this.hRegion = Core.atlas.find(this.name);
+    this.baseRegion = Core.atlas.find(this.name + "-base");
     this.lightRegion = Core.atlas.find(this.name + "-light");
     this.topRegion = Core.atlas.find(this.name + "-top");
     this.rotRegion = Core.atlas.find(this.name + "-rot");
   },
-  
+
   generateIcons(){
     return [
-      Core.atlas.find(this.name),
+      Core.atlas.find(this.name + "-base"),
       Core.atlas.find(this.name + "-rot"),
       Core.atlas.find(this.name + "-top")
     ]
   },
-  
+
   draw(tile){
-    //Why is the baseRegion not showing?
-    Draw.rect(this.hRegion, tile.drawx(), tile.drawy());
-    
+    Draw.rect(this.baseRegion, tile.drawx(), tile.drawy());
     Draw.rect(this.rotRegion, tile.drawx(), tile.drawy(), Time.time() * 10);
     Draw.rect(this.topRegion, tile.drawx(), tile.drawy());
     if(tile.entity.power.status > 0.001){
@@ -109,16 +107,7 @@ const pulse = extendContent(PowerTurret, "pulse", {
       Draw.rect(this.lightRegion, tile.drawx(), tile.drawy());
       Draw.blend();
       Draw.reset();
-    } 
-  },
-  
-  update(tile){
-    this.super$update(tile);
-  },
-  
-  shouldTurn(tile){
-    this.super$shouldTurn(tile);
-    return true;
+    }
   }
 });
 
