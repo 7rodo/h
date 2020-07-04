@@ -3,13 +3,12 @@
   "solid": true,
   "hasPower": true,
   "hasItems": true,
-  "itemCapacity": 25,
+  "itemCapacity": 20,
   "category": "effect",
   "consumes": {
     "power": 20,
     "items": {
       "items": [
-        {"item": "silicon", "amount": 30},
         {"item": "phase-fabric", "amount": 20}
       ]
     }
