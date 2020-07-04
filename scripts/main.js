@@ -7,6 +7,7 @@
   //Effect
     require("shieldgen");
     require("end");
+    require("order66");
 
   //Turrets
     require("turrets/laser");
