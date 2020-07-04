@@ -13,7 +13,7 @@ const order = extendContent(Block, "order66", {
 
   configured(tile, value){
     if(tile.entity.cons.valid() && tile.entity.power.status > 0.001){
-      Damage.damage(tile.drawx(), tile.drawy(), 1250, Mathf.random(540, 840) * Mathf.random(1, 4))
+      Damage.damage(tile.drawx(), tile.drawy(), 1250 * 8, Mathf.random(540, 840) * Mathf.random(1, 4))
     }
   },
 
