@@ -3,7 +3,7 @@
   "solid": true,
   "hasPower": true,
   "hasItems": true,
-  "itemCapacity": 50,
+  "itemCapacity": 25,
   "category": "effect",
   "consumes": {
     "power": 20,
