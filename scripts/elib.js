@@ -1,5 +1,5 @@
 module.exports = {
-  rainbowLightning(){
-    Lightning.create(team, 
+  h(){
+    Draw.blend(Blending.additive);
   }
 }
