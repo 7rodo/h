@@ -1,24 +1,25 @@
 {
   "size": 2,
   "solid": true,
+  "health": 4860,
   "hasPower": true,
   "hasItems": true,
-  "itemCapacity": 20,
+  "itemCapacity": 50,
   "category": "effect",
   "consumes": {
     "power": 20,
     "items": {
       "items": [
-        {"item": "phase-fabric", "amount": 20}
+        {"item": "surge-alloy", "amount": 50}
       ]
     }
   },
   "update": true,
   "configurable": true,
   "requirements": [
-    {"item": "copper", "amount": 300},
-    {"item": "lead", "amount": 270},
-    {"item": "graphite", "amount": 140},
-    {"item": "silicon", "amount": 130}
+    {"item": "copper", "amount": 5740},
+    {"item": "lead", "amount": 5650},
+    {"item": "graphite", "amount": 4640},
+    {"item": "silicon", "amount": 4430},
   ]
 }
