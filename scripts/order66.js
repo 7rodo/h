@@ -30,7 +30,7 @@ const order = extendContent(Block, "order66", {
   },
 
   onDestroyed(tile){
-    Damage.dynamicExplosion(tile.drawx(), tile.drawy(), Mathf.random(42, 60), Mathf.random(42, 60), Mathf.random(42, 60), 130, Pal.lancerLaser)
+    Damage.dynamicExplosion(tile.drawx(), tile.drawy(), Mathf.random(80, 100), Mathf.random(80, 100), Mathf.random(80, 100), 170, Pal.lancerLaser)
   }
 });
 
