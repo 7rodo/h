@@ -2,7 +2,7 @@
 
 //Library
   require("elib"); //Effects
-  require("ulib"): //Units
+  require("ulib"); //Units
 
 //Blocks
   //Production

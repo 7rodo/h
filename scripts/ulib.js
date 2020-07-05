@@ -1,14 +1,14 @@
 module.exports = {
+
+  //Wonderful function stolen from Xelo's
   spawnUnit(unit, team, x, y){
-    if(unit === undefined){
-      unit = UnitTypes.crawler;
-    }
+    try {
+      var baseUnit = unit.create(team);
 
-    var baseunit= unit.create(team);
-
-    baseunit.set(x, y);
-    baseunit.add();
-    Events.fire(new EventType.UnitCreateEvent(baseunit));
-    return baseunit;
+      baseUnit.set(x, y);
+      baseUnit.add();
+      Events.fire(new EventType.UnitCreateEvent(baseUnit));
+      return baseUnit;
+    } catch(err){}
   }
 }

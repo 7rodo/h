@@ -15,7 +15,7 @@ const order = extendContent(Block, "order66", {
 
   configured(tile, value){
     if(tile.entity.cons.valid() && tile.entity.power.status > 0.001){
-      Damage.damage(tile.drawx(), tile.drawy(), 1250 * 8, Mathf.random(540, 840) * Mathf.random(1, 4))
+      Damage.damage(tile.drawx(), tile.drawy(), 1250 * 8, Mathf.random(840, 1440) * Mathf.random(1, 4))
     }
   },
 
@@ -35,7 +35,11 @@ const order = extendContent(Block, "order66", {
     Damage.dynamicExplosion(tile.drawx(), tile.drawy(), Mathf.random(80, 100), Mathf.random(80, 100), Mathf.random(80, 100), 170, Pal.lancerLaser)
 
     for(var i = 0; i < 3; i++){
-      ulib.spawnUnit(UnitTypes.reaper, Team.derelict, tile.entity.getX() + Mathf.random(-60, 60), tile.entity.getY() + Mathf.random(-60, 60))
+      ulib.spawnUnit(UnitTypes.reaper, Team.crux, tile.entity.getX() + Mathf.random(-140, 140), tile.entity.getY() + Mathf.random(-140, 140))
+    }
+
+    for(var i = 0; i < 6; i++){
+      ulib.spawnUnit(UnitTypes.eradicator, Team.crux, tile.entity.getX() + Mathf.random(-80, 80), tile.entity.getY() + Mathf.random(-80, 80))
     }
   }
 });

@@ -1,7 +1,7 @@
 {
   "size": 2,
   "solid": true,
-  "health": 4860,
+  "health": 240,
   "hasPower": true,
   "hasItems": true,
   "itemCapacity": 50,
