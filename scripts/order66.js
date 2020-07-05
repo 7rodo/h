@@ -1,3 +1,5 @@
+const ulib = require("ulib");
+
 const reverseCircle = newEffect(20, e => {
   Draw.color(Pal.lancerLaser, Color.white, e.fin())
   Lines.stroke(e.fin() * 3)
@@ -31,6 +33,10 @@ const order = extendContent(Block, "order66", {
 
   onDestroyed(tile){
     Damage.dynamicExplosion(tile.drawx(), tile.drawy(), Mathf.random(80, 100), Mathf.random(80, 100), Mathf.random(80, 100), 170, Pal.lancerLaser)
+
+    for(var i = 0; i < 3; i++){
+      ulib.spawnUnit(UnitTypes.reaper, Team.derelict, tile.entity.getX() + Mathf.random(-60, 60), tile.entity.getY() + Mathf.random(-60, 60))
+    }
   }
 });
 
