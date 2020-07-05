@@ -27,6 +27,10 @@ const order = extendContent(Block, "order66", {
         Lightning.create(Team.crux, Pal.lancerLaser, Mathf.random(2.7, 9.6), tile.drawx() + Mathf.random(-60, 60), tile.drawy() + Mathf.random(-60, 60), Mathf.random(360), Mathf.random(4, 11))
       }
     }
+  },
+
+  onDestroyed(tile){
+    Damage.dynamicExplosion(tile.drawx(), tile.drawy(), Mathf.random(42, 60), Mathf.random(42, 60), Mathf.random(42, 60), 130, Pal.lancerLaser)
   }
 });
 

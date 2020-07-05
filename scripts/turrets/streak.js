@@ -48,8 +48,8 @@ streakLaser.hitEffect = Fx.none;
 
 const streakSquare = newEffect(18, h => {
   Draw.alpha(0.6);
-  Draw.color(colors[3], colors[1], 0.2);
-  Lines.square(h.x, h.y, h.fout() * 16);
+  Draw.color(colors[2], colors[1], h.fin());
+  Lines.circle(h.x, h.y, h.fout() * 30);
 });
 
 const streak = extendContent(LaserTurret, "streak", {
