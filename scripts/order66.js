@@ -24,7 +24,7 @@ const order = extendContent(Block, "order66", {
       }
 
       if(Mathf.chance(0.04)){
-        Lightning.create(Team.crux, Pal.lancerLaser, Mathf.random(2.7, 9.6), tile.drawx() + Mathf.random(-60, 60), tile.drawy() + Mathf.random(-60, 60), Mathf.random(360), Mathf.random(4, 11))
+        Lightning.create(Team.derelict, Pal.lancerLaser, Mathf.random(2.7, 9.6), tile.drawx() + Mathf.random(-60, 60), tile.drawy() + Mathf.random(-60, 60), Mathf.random(360), Mathf.random(4, 11))
       }
     }
   },
