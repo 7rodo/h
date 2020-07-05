@@ -1,6 +1,6 @@
 {
   "health": 2240,
-  "reload": 120,
+  "reload": 80,
   "size": 3,
   "range": 180,
   "targetAir": true,
