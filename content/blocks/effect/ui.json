@@ -1,0 +1,15 @@
+{
+  "health": 60,
+  "hasPower": true,
+  "solid": true,
+  "configurable": true,
+  "update": true,
+  "consumes": {
+    "power": 5
+  },
+  "requirements": [
+    {"name": "graphite", "amount": 50},
+    {"name": "silicon", "amount": 30}
+  ],
+  "category": "effect"
+}
