@@ -12,6 +12,7 @@
     require("shieldgen");
     require("end");
     require("order66");
+    require("ui")
 
   //Turrets
     require("turrets/laser");
