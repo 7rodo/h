@@ -12,7 +12,6 @@ const team = extendContent(Block, "team", {
   },
 
   buildConfiguration(tile, table){
-
     table.addImageButton(Icon.wrench, Styles.clearTransi, run(() => {
       tile.configure(0)
     })).size(50).disabled(boolf(b => tile.entity != null && !tile.entity.power.status > 0.001))
@@ -23,24 +22,29 @@ const team = extendContent(Block, "team", {
 
   },
 
-  configured(tile, value){
+  configured(tile, player, value){
     if(tile.entity.power.status > 0.001){
-      try {
-        if(this.value == 0){
-          print("h")
-        } else
+      var handle = [
+        //stolen from ritzip's unit spawner, see https://github.com/ritzip/testing for the h
+        (tile, player) => tile.entity.setTeam((tile.entity.team().id + 1) > 5 ? 0 : tile.entity.team().id + 1),
+        (tile, player) => Vars.player.setTeam(tile.entity.team())
+       ];
 
-        if(this.value == 1){
-          print("hh")
-        }
-      } catch(err){print(err)}
+       handle[value](tile, player);
     }
   },
 
   draw(tile){
     Draw.rect(this.region, tile.drawx(), tile.drawy())
-    Draw.color(tile.getTeam().color)
+    Draw.color(tile.entity.team().color)
     Draw.rect(this.topRegion, tile.drawx(), tile.drawy())
     Draw.reset()
   }
-})
+});
+
+team.entityType = prov(() => extend(TileEntity, {
+  _team: Team.sharded,
+
+  team(){ return this._team },
+  setTeam(team){ this._team = Team.get(team) },
+}));
