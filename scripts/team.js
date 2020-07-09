@@ -1,4 +1,4 @@
-const ui = extendContent(Block, "ui", {
+const team = extendContent(Block, "team", {
   load(){
     this.region = Core.atlas.find(this.name);
     this.topRegion = Core.atlas.find(this.name + "-top");
@@ -12,18 +12,28 @@ const ui = extendContent(Block, "ui", {
   },
 
   buildConfiguration(tile, table){
-    table.addImageButton(Icon.add, Styles.clearTransi, run(() => {
+
+    table.addImageButton(Icon.wrench, Styles.clearTransi, run(() => {
       tile.configure(0)
     })).size(50).disabled(boolf(b => tile.entity != null && !tile.entity.power.status > 0.001))
 
-    table.addImageButton(Icon.lock, Styles.clearTransi, run(() => {
-      tile.configure(0)
+    table.addImageButton(Icon.add, Styles.clearTransi, run(() => {
+      tile.configure(1)
     })).size(50).disabled(boolf(b => tile.entity != null && !tile.entity.power.status > 0.001))
+
   },
 
   configured(tile, value){
     if(tile.entity.power.status > 0.001){
-      print("h")
+      try {
+        if(this.value == 0){
+          print("h")
+        } else
+
+        if(this.value == 1){
+          print("hh")
+        }
+      } catch(err){print(err)}
     }
   },
 
