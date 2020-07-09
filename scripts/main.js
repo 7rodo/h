@@ -11,8 +11,8 @@
   //Effect
     require("shieldgen");
     require("end");
+    require("team");
     require("order66");
-    require("team")
 
   //Turrets
     require("turrets/laser");
@@ -21,8 +21,8 @@
     require("turrets/streak");
 
   //Walls
-    require("walls/shieldwall");
     require("walls/dirium");
+    require("walls/shieldwall");
 
 //Resources & Materials
 
