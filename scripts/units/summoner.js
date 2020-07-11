@@ -1,13 +1,13 @@
 const ulib = require("ulib");
 
-const summonEffect = newEffect(10, e => {
+const summonEffect = newEffect(20, e => {
   Draw.color(Pal.lancerLaser);
-  Lines.square(e.x, e.y, 10 * e.fin(), 45);
+  Lines.square(e.x, e.y, 30 * e.fin(), 45);
 })
 
-const deadEffect = newEffect(12, e => {
+const deadEffect = newEffect(15, e => {
   Draw.color(Pal.lancerLaser);
-  Lines.circle(e.x, e.y, 40 * e.fin());
+  Lines.circle(e.x, e.y, 30 * e.fin());
 });
 
 const orb = extend(BasicBulletType, {
@@ -34,7 +34,7 @@ const summonerWeapon = extendContent(Weapon, "summoner-equip", {
   }
 });
 
-summonerWeapon.reload = 360;
+summonerWeapon.reload = 600;
 summonerWeapon.alternate =  true;
 summonerWeapon.shootSound = Sounds.wave;
 summonerWeapon.bullet = orb;
@@ -49,6 +49,15 @@ const summoner = extendContent(UnitType, "summoner", {
 });
 
 summoner.create(prov(() => extend(GroundUnit, {
+    update(){
+      this.super$update();
+
+      if(Mathf.chance(Time.delta() * 0.004)){
+        Effects.effect(summonEffect, this);
+        ulib.spawnUnit(UnitTypes.dagger, this.getTeam(), this.x, this.y)
+      }
+    },
+
     onDeath(){
       Effects.effect(deadEffect, this);
       Effects.shake(2, 2, this);
