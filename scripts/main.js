@@ -17,6 +17,7 @@
   //Turrets
     require("turrets/laser");
     require("turrets/tesla");
+    require("turrets/sniper")
     require("turrets/pulse");
     require("turrets/streak");
 

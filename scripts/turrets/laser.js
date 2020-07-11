@@ -40,4 +40,4 @@ const laser = extendContent(PowerTurret, "laser", {
         return false;
       }
   }
-})
+});
