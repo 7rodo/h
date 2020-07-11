@@ -35,6 +35,7 @@ const summonerWeapon = extendContent(Weapon, "summoner-equip", {
 });
 
 summonerWeapon.reload = 360;
+summonerWeapon.alternate =  true;
 summonerWeapon.shootSound = Sounds.wave;
 summonerWeapon.bullet = orb;
 
