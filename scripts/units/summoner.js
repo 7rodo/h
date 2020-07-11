@@ -42,4 +42,4 @@ const summoner = extendContent(UnitType, "summoner", {
   }
 }, prov(() => extend(GroundUnit, {})));
 
-summoner.weapon = 
+summoner.weapon = summonerWeapon;
