@@ -1,0 +1,17 @@
+{
+  "type": "GroundUnit",
+  "health": 1600,
+  "speed": 0.2,
+  "maxVelocity": 0.2,
+  "range": 160,
+  "attackLength": 120,
+  "shootCone": 360,
+  "mass": 10,
+  "hitsize": 4,
+  "flying": false,
+  "engineSize": 0,
+  "engineOffset": 0,
+  "rotateWeapon": true,
+  "rotatespeed": 0.2,
+  "baseRotateSpeed": 0.1
+}
