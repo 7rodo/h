@@ -1,17 +1,18 @@
 {
-  "heatColor": "e61e1e",
+  "heatColor": "f7ca6f",
   "health": 1800,
-  "reload": 40,
+  "reload": 65,
+  "coolantMultiplier": 1.5,
   "size": 2,
-  "range": 240,
-  "targetAir": false,
-  "powerUse": 1.5,
-  "shootSound": "none",
-  "activeSound": "laserh",
-  "shootCone": 0.6,
+  "range": 330,
+  "targetAir": true,
+  "shootSound": "bigshot",
+  "shootCone": 8,
   "category": "turret",
   "requirements": [
-    {"item": "lead", "amount": 55},
-    {"item": "titanium", "amount": 35}
+    {"item": "copper", "amount": 460},
+    {"item": "lead", "amount": 420},
+    {"item": "graphite", "amount": 400},
+    {"item": "silicon", "amount": 350}
   ]
 }
